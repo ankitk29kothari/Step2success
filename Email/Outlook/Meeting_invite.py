@@ -2,25 +2,35 @@ import win32com.client
 outlook = win32com.client.Dispatch("Outlook.Application")
 
 
-def sendMeeting(self,start_time,duration,subject,reason):
+def sendMeeting(start_time,duration,subject,reason):
 
 	  appt = outlook.CreateItem(1) # AppointmentItem
 	  print(start_time)
 	  appt.Start = str(start_time)# yyyy-MM-dd hh:mm
 	  appt.Subject = subject
 	  appt.Duration = duration # In minutes (60 Minutes)
-	  appt.Location = "Orange Business Services Carrier Planned Maintenance for GLAXOSMITHKLINE SERV"
+	  appt.Location = "Meeting Location"
 	  appt.MeetingStatus = 1 # 1 - olMeeting; Changing the appointment to meeting. Only after changing the meeting status recipients can be added
-	  appt.Body = "HI ALL,"+'\n\n'+'Please find below the details of the activity to avoid alarms for the required device.'+'\n\n'+reason
-	  to=self.file_handling()
-	  print(to,type(to))
-	  for i in to:
-	  	appt.Recipients.Add(i) 
+	  appt.Body = "HI ALL,"+'\n\n'+'\n\n'+reason
+	  
+	  appt.Recipients.Add('ankit.kothari@orange.com') 
 	  appt.Save()
 	  appt.Send()
 
 
-	def sendRecurringMeeting(self):    
+
+
+
+
+sendMeeting('2020-04-05 15:33',60,'na','naaaaa')
+
+
+
+
+
+
+
+def sendRecurringMeeting():    
 	  appt = outlook.CreateItem(1) # AppointmentItem
 	  appt.Start = "2018-10-28 10:10" # yyyy-MM-dd hh:mm
 	  appt.Subject = "Subject of the meeting"
