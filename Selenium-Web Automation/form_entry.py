@@ -35,3 +35,7 @@ f_name.send_keys("Ankit")
 l_name=driver.find_element_by_id("last_name")
 l_name.send_keys("Kothari")
 
+
+
+#For submit  l_name.click()
+
