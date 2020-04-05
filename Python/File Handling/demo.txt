@@ -1,0 +1,13 @@
+
+ptul061#sh ip int brief
+Interface                  IP-Address      OK? Method Status                Protocol
+Embedded-Service-Engine0/0 unassigned      YES NVRAM  administratively down down    
+GigabitEthernet0/0         151.193.149.218 YES NVRAM  up                    up      
+GigabitEthernet0/1         unassigned      YES NVRAM  up                    up      
+GigabitEthernet0/1.20      57.21.10.230    YES NVRAM  up                    up      
+GigabitEthernet0/2         unassigned      YES NVRAM  down                  down    
+Serial1/0                  unassigned      YES unset  administratively down down    
+Loopback1111               57.205.183.15   YES NVRAM  up                    up      
+Loopback1112               57.215.97.150   YES NVRAM  up                    up
+ptul061# 
+ 
