@@ -24,8 +24,14 @@ driver=webdriver.Chrome(executable_path=r"chromedriver.exe")
 
 driver.get("https://step2success.in/selenium-form/")
 time.sleep(5)
+
+
+
+
+
 f_name=driver.find_element_by_id("first_name")
 f_name.send_keys("Ankit")
 
 l_name=driver.find_element_by_id("last_name")
 l_name.send_keys("Kothari")
+
