@@ -37,5 +37,5 @@ l_name.send_keys("Kothari")
 
 
 
-#For submit  l_name.click()
+For submit  l_name.click()
 

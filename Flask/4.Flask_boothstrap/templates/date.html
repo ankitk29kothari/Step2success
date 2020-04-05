@@ -5,7 +5,12 @@
 This will auto refresh the page in every 2 second-->
 <meta http-equiv="refresh" content="2">
 
-<div class="container">
+
+
+
+<!--- 1st Progress bar-->
+
+<div class="container">{
     <div class="row">
         <div class="col-md-3 col-sm-6">
             <div class="progress blue">
@@ -15,9 +20,20 @@ This will auto refresh the page in every 2 second-->
                 <span class="progress-right">
                     <span class="progress-bar"></span>
                 </span>
+                <!--- Value to show-->
                 <div class="progress-value"> {{current_time}}</b></div>
             </div>
         </div>
+
+
+
+<!--- 2nd Progress bar-->
+
+
+
+
+
+
         <div class="col-md-3 col-sm-6">
             <div class="progress yellow">
                 <span class="progress-left">
@@ -31,6 +47,14 @@ This will auto refresh the page in every 2 second-->
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
 
 <style>
 .progress{

@@ -13,7 +13,7 @@ import time
 #Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.
 #It contains CSS- and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface component
 
-#IF we want our time updated in html page so we nned to refresh page every seond so we uses HTML auto refresh in HTML file.
+#IF we want our time updated in html page so we nEed to refresh page every seond so we uses HTML auto refresh in HTML file.
 #<meta http-equiv="refresh" content="2">
 
 @app.route('/')
@@ -31,7 +31,7 @@ def show():
 
 
 if __name__ == '__main__':
-    app.run(port= 5038)
+    app.run(port= 5040,debug=True)
 
 
 

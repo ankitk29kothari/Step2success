@@ -26,11 +26,17 @@ import time
 @app.route('/')
 def show():
 	
-	current_time=str(datetime.datetime.now())
-	now = datetime.datetime.now()
-	time = str(now.hour)+" : "+ str(now.minute)
-	print(time)
+	
 	return render_template('date.html')
+
+
+
+
+
+
+
+
+
 
 
 
@@ -47,7 +53,7 @@ def show_all():
 
 
 if __name__ == '__main__':
-    app.run(port= 5035)
+    app.run(port= 5048,debug=True)
 
 
 
