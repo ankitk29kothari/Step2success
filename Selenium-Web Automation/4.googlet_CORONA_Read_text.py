@@ -1,3 +1,8 @@
+#############################
+#                            #
+#      Step2success.in       #
+#        copyright           #
+##############################  
 from selenium import webdriver
 
 from selenium.webdriver.support.ui import WebDriverWait
@@ -27,11 +32,11 @@ print('Opening URl in chrome driver')
 time.sleep(3)
 
 
-f_name=driver.find_element_by_xpath('//*[@class="NKcBbd"]')
-f_name.click()
+find=driver.find_element_by_xpath('//*[@class="NKcBbd"]')
+find.click()
 time.sleep(3)
 
-
-f_name=driver.find_element_by_xpath('//*[@class="kp-tabcontent"]')
-print(f_name.text)
+## to read value fron id use .text
+find2=driver.find_element_by_xpath('//*[@class="kp-tabcontent"]')
+print(find2.text)
 time.sleep(5)

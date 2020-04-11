@@ -1,3 +1,8 @@
+#############################
+#                            #
+#      Step2success.in       #
+#        copyright           #
+##############################  
 """The first step is to create an SMTP object, each object is used for connection 
 with one server."""
 print('start')

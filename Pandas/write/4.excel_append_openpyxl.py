@@ -16,7 +16,7 @@ def excel_write(col_a,col_b,line_no):
     #beacuse our counter is 0 and excel starts from 2,1 is header
 
     
-    sheet_obj.cell(row=line_no, column=1).value = 'ankit'
+    sheet_obj.cell(row=line_no, column=1).value = col_a
 
     read_data=(sheet_obj.cell(row=line_no, column=1).value)
     
