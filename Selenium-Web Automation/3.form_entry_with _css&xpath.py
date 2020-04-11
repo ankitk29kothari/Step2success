@@ -39,23 +39,56 @@ time.sleep(5)
 
 
 
-
+############################################
 #you can use any of these method
+##########################################
+
+
 f_name=driver.find_element_by_id("first_name")
+f_name.send_keys("Iam finding by id")
+print('Iam finding by id')
+time.sleep(3)
+############################################
+
 #or
+
 f_name=driver.find_element_by_xpath('//*[@data-role="tooltip"]')
+f_name.clear()
+f_name.send_keys("Xpath-1")
+print('Xpath-1')
+time.sleep(3)
+############################################
+
 #or
 f_name=driver.find_element_by_xpath('//*[@id="first_name"]')
+f_name.clear()
+f_name.send_keys("Xpath-2")
+print('Xpath-2')
+time.sleep(3)
+
+############################################
+#or
 
 
 f_name=driver.find_element_by_xpath('//*[@class="form-control"]')
+f_name.clear()
+f_name.send_keys("Xpath-3")
+print('Xpath-3')
+time.sleep(3)
+
+############################################
+#or  (This is best use case to handle slowness of the page )
+
 f_name=WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.XPATH, '//*[@class="form-control"]')))
-f_name.send_keys("Ankit")
-print('found id now sending keys')
+f_name.clear()
+f_name.send_keys("Xpath-with wait function")
+print('Xpath-with wait function')
+time.sleep(3)
 
 
 
-
+############################################
+#Submit button
 
 submit_button=driver.find_element_by_id("register")
 

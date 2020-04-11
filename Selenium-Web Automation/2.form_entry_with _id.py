@@ -40,8 +40,8 @@ l_name=driver.find_element_by_id("last_name")
 l_name.send_keys("Kothari")
 
 
-f_name=driver.find_element_by_id("register")
-f_name.click()
+button=driver.find_element_by_id("register")
+button.click()
 print('found id of submit button now clicking on it')
 
 
