@@ -10,7 +10,7 @@
 # only can use in local system
 import sqlite3 
  
-db='main.db'
+db='main1.db'
 
 def create(): 
                       
@@ -59,6 +59,6 @@ def update(name,email,phone_no):
 
 # uncomment to call any functions
 
-#create()
+create()
 #update('ankit','xx.gmail.com',123)
 read()

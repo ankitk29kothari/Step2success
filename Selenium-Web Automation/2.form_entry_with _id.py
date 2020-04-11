@@ -16,13 +16,15 @@ import time
 
 chrome_options = webdriver.ChromeOptions()
 
+
 #path where driver is stored
 
 driver=webdriver.Chrome(executable_path=r"chromedriver.exe")
 
 #url which nned to be open
 
-driver.get("https://step2success.in/selenium-form/")
+driver.get("https://step2success.in/registration-page-demo/")
+print('Opening URl in chrome driver')
 time.sleep(5)
 
 
@@ -31,11 +33,19 @@ time.sleep(5)
 
 f_name=driver.find_element_by_id("first_name")
 f_name.send_keys("Ankit")
+print('found id now sending keys')
+
 
 l_name=driver.find_element_by_id("last_name")
 l_name.send_keys("Kothari")
 
 
+f_name=driver.find_element_by_id("register")
+f_name.click()
+print('found id of submit button now clicking on it')
 
-For submit  l_name.click()
+
+
+
+#For submit  l_name.click()
 
