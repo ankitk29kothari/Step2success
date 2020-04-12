@@ -1,7 +1,7 @@
 import win32com.client
 import time
-# Reading files of outllok
-
+# Reading files of outlook
+#
 
 		
 outlook = win32com.client.Dispatch("Outlook.Application").GetNamespace("MAPI")
