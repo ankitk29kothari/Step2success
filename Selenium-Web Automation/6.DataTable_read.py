@@ -20,4 +20,21 @@ import time
 
 driver = webdriver.Chrome(executable_path="chromedriver.exe",chrome_options=chrome_options)
 driver.get("https://step2success.in/datable-demo/")
+time.sleep(2)
+table=driver.find_element_by_xpath('//*[@id="example"]')
+#print(table.text)
+
+# sending text on search box
+#srch=driver.find_element_by_xpath('//*[@type="search"]')
+#srch.send_keys('Airi')
+table=driver.find_element_by_xpath('//*[@id="example"]')
+#print(table.text)
+rows=table.find_elements_by_tag_name('tr')
+#print(rows)
+for row in rows:
+	try:
+		cols=row.find_elements_by_tag_name('td')
+		print(cols[0].text,cols[-1].text)
+	except:
+		pass
 

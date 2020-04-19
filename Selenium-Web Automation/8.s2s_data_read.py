@@ -17,20 +17,25 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 chrome_options = webdriver.ChromeOptions()
 import time
-
+ 
 driver = webdriver.Chrome(executable_path="chromedriver.exe",chrome_options=chrome_options)
-driver.get("https://www.oyorooms.com/search?location=Delhi%2C%20India&city=Delhi&searchType=city&coupon=&checkin=17%2F11%2F2019&checkout=18%2F11%2F2019&roomConfig%5B%5D=1&showSearchElements=false&country=india&guests=1&rooms=1&filters%5Bcity_id%5D=2")
+driver.get("https://step2success.in/courses/python-deepdive/")
 
+time.sleep(5)
+des=driver.find_element_by_xpath('//div[@id="learn-press-course-tabs"]/ul/li[2]/a')
+des.click()
+
+time.sleep(3)
 
 
 # using find elements to get all data in list witin the same id
-description=driver.find_elements_by_xpath('//*[@class="listingHotelDescription__hotelName d-textEllipsis"]')
-final_price=driver.find_elements_by_xpath('//*[@class="listingPrice__finalPrice"]')
+description=driver.find_elements_by_xpath('//*[@class="lesson-title course-item-title button-load-item"]')
+
 
 
 #print ist of all elements	 present in id.
 #print(description)
 
-for i,j in zip(description,final_price):
-	print(i.text,j.text)
-	print("\n\n")
+for i in (description):
+	print(i.text)
+	print("....\n\n")
