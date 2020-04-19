@@ -33,8 +33,8 @@ client.connect(hostname=host, username=login, password=password, look_for_keys=F
 # series of command not work in this which are dependent of each other. All command will run independently.
 # much faster than Terminal
 #############################################################################################################################
-
-stdin , stdout, stderr = client.exec_command('pwd')
+device='pxvu130'
+stdin , stdout, stderr = client.exec_command("/usr/local/sbin/fping {0}".format(device))
 error = stderr.read()
 data = stdout.read()
 if error:
