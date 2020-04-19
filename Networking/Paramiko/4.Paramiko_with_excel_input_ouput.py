@@ -86,5 +86,7 @@ commands=df['command']
 s_ids=df['s_id']
 
 for router,command,s_id in zip(routers,commands,s_ids):
-
-	connect(router,command,s_id)
+	try:
+		connect(router,command,s_id)
+	except:
+		pass
