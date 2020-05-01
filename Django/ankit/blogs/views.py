@@ -1,16 +1,50 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse,JsonResponse
 # Create your views here.
+from .models import posts
 
+posts_dummy=[
+
+	{'author':'Ankit Kothari',
+		'tittle':'python',
+		'content':'First post',
+		'date_posted':'August 27,2018'
+
+	},
+
+
+
+	{'author':'Ankit Kothari',
+		'tittle':'python2',
+		'content':'Second post',
+		'date_posted':'August 27,2018'
+
+	},
+	{'author':'Himanshu',
+		'tittle':'python',
+		'content':'Third post',
+		'date_posted':'August 27,2018'
+
+	}
+
+
+]
+
+
+
+
+title='Blog'
 
 def home(request):
-	return HttpResponse('<h1>ANKIT</h1>')
+	context={'posts':posts,'title':title}
+	return render(request,'home.html',{'posts':posts.objects.all(),'title':title})
 
 
 
 def about(request):
-	return HttpResponse('<h1>About us</h1>')
+	return render(request,'about.html')
 
 
 def login(request):
-	return HttpResponse('<h1>Login</h1>')
+	return render(request,'login.html')
+

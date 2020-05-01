@@ -21,3 +21,5 @@ import time
 driver = webdriver.Chrome(executable_path="chromedriver.exe",chrome_options=chrome_options)
 driver.get("https://step2success.in/iframe-demo/")
 
+driver.switch_to.frame(0)
+
