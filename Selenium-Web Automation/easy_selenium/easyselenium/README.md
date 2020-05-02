@@ -26,5 +26,6 @@ debug = True/False (to print what is happening inside the code)
 Example
 This is by default arguments
 
-open_browser(headless=False,path="chromedriver.exe",browser='chrome',debug=False)
+## open_browser(headless=False,path="chromedriver.exe",browser='chrome',debug=False)
 ```
+open_browser(headless=False,path="chromedriver.exe",browser='chrome',debug=False)
