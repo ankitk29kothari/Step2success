@@ -184,12 +184,13 @@ def read_text(**kwargs):
 	if length>1:
 
 		output=[]
+		c=0
 		
 		for i in elements4:
 			if i.get_attribute('value')!=None:
-				output.append('("{}","{}","{}")'.format(i.text,i.get_attribute('value'),i))
+				output.append('("{}",{}","{}","{}")'.format(c,i.text,i.get_attribute('value'),i))
 			else:
-				output.append('("{}","{}")'.format(i.text,i))
+				output.append('("{}","{}","{}")'.format(c,i.text,i))
 	else:
 		if element4.get_attribute('value')!=None:
 			output=(element4.text,element4.get_attribute('value'),element4)
@@ -197,7 +198,9 @@ def read_text(**kwargs):
 			output=(element4.text,element4)
 
 	if debugs:
-		print(output,'\n\nTotal elements found',length)
+		print('Total elements found',length)
+		for j in output:
+			print(j)
 	return(output)
 
 
@@ -232,8 +235,8 @@ def alerts(text=''):
 		 else:
 		 	a=driver.switch_to.alert().text
 		 	return(a)
-	except:
-		print('no alert present')
+	except Exception as e:
+		print(e,'no alert present')
 	 
 
 

@@ -7,42 +7,36 @@
 #pip install selenium        
 
 #improting selenium driver(always copy paste all this function to minimse hassle)
-
+import time
 
 from easyselenium import *
 import time
-open_browser(path="chromedriver.exe",browser='chrome')
+open_browser(path="chromedriver.exe",browser='chrome',debug=True)
 #open_broswer(executable_path=r"chromedriver.exe",browser='firefox')
 #open_broswer(executable_path=r"chromedriver.exe",browser='ie')
 #open_broswer(browser='chrome',headless=True)
 
-driver=webdriver.Chrome(executable_path=r"chromedriver.exe")
-
-#url which nned to be open
-
-driver.get("https://step2success.in/registration-page-demo/")
-print('Opening URl in chrome driver')
-time.sleep(5)
-
-
-
+open_url(url="https://step2success.in/registration-page-demo/")
+open_url(url="https://step2success.in/iframe-demo/",new_tab=True)
+window_handle(no=0)
+send_text(text='Ankit',id='first_name')
+send_text(text='Kothari',id='last_name',with_enter=True)
+select_dropdown(option='What is your Birthdate?',id='dropdown')
+#click_on(text='REGISTER')
+#click_on(id='register')
 
 
-f_name=driver.find_element_by_id("first_name")
-f_name.send_keys("Ankit")
-print('found id now sending keys')
+time.sleep(3)
 
+window_handle(no=1)
+switch_frame(no=0)
+read_text(href ='#')
+click_on(text='Follow On Twitter')
 
-l_name=driver.find_element_by_id("last_name")
-l_name.send_keys("Kothari")
+window_handle(no=2)
 
-
-button=driver.find_element_by_id("register")
-button.click()
-print('found id of submit button now clicking on it')
+#close_window(no=2)
 
 
 
-
-#For submit  l_name.click()
 
