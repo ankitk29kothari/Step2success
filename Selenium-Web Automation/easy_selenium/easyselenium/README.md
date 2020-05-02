@@ -13,16 +13,18 @@ Selenium's source code is made available under the [Apache 2.0 license](https://
 ## Documentation
 
 
-##from easy selenium import *
+## from easy selenium import *
 ## Open broswer()
 ```sh
 with optional arguments
-
-This is by default arguments
-open_browser(headless=False,path="chromedriver.exe",browser='chrome',debug=False)
 
 headless = True/False (to work without browser)
 path = 'your drirectory by default is default directory'
 browser = 'chrome'/'firefox'/ie
 debug = True/False (to print what is happening inside the code)
+
+Example
+This is by default arguments
+
+open_browser(headless=False,path="chromedriver.exe",browser='chrome',debug=False)
 ```
