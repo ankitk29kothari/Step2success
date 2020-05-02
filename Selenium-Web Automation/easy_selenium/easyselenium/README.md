@@ -14,7 +14,7 @@ Selenium's source code is made available under the [Apache 2.0 license](https://
 
 
 ## from easy selenium import *
-## Open broswer()
+## open_browser()
 ```sh
 with optional arguments
 
@@ -28,4 +28,27 @@ This is by default arguments
 
 ## open_browser(headless=False,path="chromedriver.exe",browser='chrome',debug=False)
 ```
-open_browser(headless=False,path="chromedriver.exe",browser='chrome',debug=False)
+
+## open_url(url='')
+```sh
+with optional arguments
+
+url = 'your web url'
+new_tab = True/False (open in new tab or same)
+Example
+This is by default arguments
+
+## open_url(url='www.step2success.in',new_tab=True)
+```
+
+
+## window_handle(no=1)
+To switch to your popup or another tab window ()
+by default time to wait is 50 sec
+
+
+
+## switch_frame(no=1 or name='mainframe')
+to switch to iframe or frame with no or name
+by default time to wait is 50 sec
+
