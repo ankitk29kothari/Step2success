@@ -1,9 +1,9 @@
 import setuptools
  
 setuptools.setup(
-     name='easy_selenium',    # This is the name of your PyPI-package.
+     name='easyselenium',    # This is the name of your PyPI-package.
      version='0.1',                          # Update the version number for new releases
-     scripts=['easy_selenium.py'] ,                # The name of your scipt, and also the command you'll be using for calling it
+              # The name of your scipt, and also the command you'll be using for calling it
      author="ankit.kothari",
     author_email="ankit.kothari@hotmail.com",
     description="This is a selenium easy library which has easy syntax build on selenium.all the things are running in background we are calling only functions..This is too easy for begineers",

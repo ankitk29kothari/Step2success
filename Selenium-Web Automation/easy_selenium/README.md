@@ -29,7 +29,7 @@ This is by default arguments
 ## open_browser(headless=False,path="chromedriver.exe",browser='chrome',debug=False)
 ```
 
-## open_url(url='')
+## open_url(url='www.google.in')
 ```sh
 with optional arguments
 
@@ -43,10 +43,11 @@ This is by default arguments
 
 
 ## window_handle(no=1)
+```sh
 To switch to your popup or another tab window ()
 by default time to wait is 50 sec
 
-
+```
 
 ## switch_frame (no=1 or name='mainframe')
 ```sh

@@ -61,7 +61,7 @@ def open_browser(headless=False,path="",browser='chrome',debug=False):
 			path='IEDriverServer1.exe'
 		driver = webdriver.Ie(path)
 
-	print('####################################################\n Easy selenium Library by Ankit Kothari www.step2success.in\n####################################################\n icensed under the Apache License, Version 2.0  \n####################################################')
+	print('####################################################\n Easy selenium Library by Ankit Kothari www.step2success.in\n####################################################\n Licensed under the Apache License, Version 2.0  \n####################################################')
 	return(driver)
 
 def open_url(url='www.step2success.in',new_tab=False):
@@ -184,12 +184,14 @@ def read_text(**kwargs):
 	if length>1:
 
 		output=[]
+		c=0
 		
 		for i in elements4:
 			if i.get_attribute('value')!=None:
-				output.append('("{}","{}","{}")'.format(i.text,i.get_attribute('value'),i))
+				output.append('("{}",{}","{}","{}")'.format(c,i.text,i.get_attribute('value'),i))
 			else:
-				output.append('("{}","{}")'.format(i.text,i))
+				output.append('("{}","{}","{}")'.format(c,i.text,i))
+			c+=1
 	else:
 		if element4.get_attribute('value')!=None:
 			output=(element4.text,element4.get_attribute('value'),element4)
@@ -197,7 +199,9 @@ def read_text(**kwargs):
 			output=(element4.text,element4)
 
 	if debugs:
-		print(output,'\n\nTotal elements found',length)
+		print('Total elements found',length)
+		for j in output:
+			print(j)
 	return(output)
 
 
@@ -232,8 +236,8 @@ def alerts(text=''):
 		 else:
 		 	a=driver.switch_to.alert().text
 		 	return(a)
-	except:
-		print('no alert present')
+	except Exception as e:
+		print(e,'no alert present')
 	 
 
 
