@@ -49,6 +49,53 @@ by default time to wait is 50 sec
 
 
 ## switch_frame(no=1 or name='mainframe')
-to switch to iframe or frame with no or name
+To switch to iframe or frame with no or name
 by default time to wait is 50 sec
 
+
+## click_on(text='submit'or image='imagepath' or id='submit' or css='send' or xpath='this')
+To Click on buton based on iamge/Text or xpath
+by default time to wait is 50 sec
+```sh
+with optional arguments
+
+repeat=True/False (True-To double click on item)
+```
+
+
+## send_text(text='your text' with  id='submit' or css='send' or xpath='this')
+To send text to block
+by default time to wait is 50 sec
+```sh
+with optional arguments
+
+with_enter=True/False (True-To enter after type text)
+```
+
+## select_dropdown (option ='option to select' with  id='submit' or css='send' or xpath='this')
+To select option in dropdown with partial text
+by default time to wait is 50 sec
+
+
+
+## read_text (id='submit' or css='send' or xpath='this')
+To read text from element/multiple elements
+It is samrt enough to automatically detect if single or multiple element is present
+Value/Text is present
+
+Then return you a list of elemnts with tuple insde it containing text,value and session_id
+by default time to wait is 50 sec
+
+
+## close_window (no=1)
+To switch and close the provided window
+optional switch_to=0
+to switch to this window after closing
+
+
+## alerts (text='yes'/'no'/'custom'/blank to read it text)
+To accept/decline/send text/read text from alert box
+
+
+
+Ex:
