@@ -61,7 +61,7 @@ def open_browser(headless=False,path="",browser='chrome',debug=False):
 			path='IEDriverServer1.exe'
 		driver = webdriver.Ie(path)
 
-	print('####################################################\n Easy selenium Library by Ankit Kothari www.step2success.in\n####################################################\n icensed under the Apache License, Version 2.0  \n####################################################')
+	print('####################################################\n Easy selenium Library by Ankit Kothari www.step2success.in\n####################################################\n Licensed under the Apache License, Version 2.0  \n####################################################')
 	return(driver)
 
 def open_url(url='www.step2success.in',new_tab=False):

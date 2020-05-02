@@ -18,4 +18,5 @@ __version__ = '0.1'
 __author__ = 'Ankit Kothari'
 __license__ = 'Apache 2.0'
 
-from .easyselenium import easyselenium
+from .easyselenium import *
+
