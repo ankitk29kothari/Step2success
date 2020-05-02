@@ -13,9 +13,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 """
-__title__ = 'easy_selenium'
+__title__ = 'easyselenium'
 __version__ = '0.1'
-__author__ = 'Ankit Kothari Mitra'
+__author__ = 'Ankit Kothari'
 __license__ = 'Apache 2.0'
 
-from .easy_selenium import easy_selenium
+from .easyselenium import easyselenium
