@@ -1,4 +1,4 @@
-easySelenium [![Travis Status](https://camo.githubusercontent.com/28d47643ab6946aa29704c589687a64a47b9d5f1/68747470733a2f2f7472617669732d63692e6f72672f63616c6c7369676e2d76697065722f466c61736b2d5a69707065722e7376673f6272616e63683d6d6173746572) [![AppVeyor Status](https://camo.githubusercontent.com/71826362d1ae41f71a610f65ef803b3c67d86856/68747470733a2f2f72656164746865646f63732e6f72672f70726f6a656374732f666c61736b2d7a69707065722f62616467652f3f76657273696f6e3d6c6174657374)
+easyselenium ![Travis Status](https://camo.githubusercontent.com/28d47643ab6946aa29704c589687a64a47b9d5f1/68747470733a2f2f7472617669732d63692e6f72672f63616c6c7369676e2d76697065722f466c61736b2d5a69707065722e7376673f6272616e63683d6d6173746572) ![AppVeyor Status](https://camo.githubusercontent.com/71826362d1ae41f71a610f65ef803b3c67d86856/68747470733a2f2f72656164746865646f63732e6f72672f70726f6a656374732f666c61736b2d7a69707065722f62616467652f3f76657273696f6e3d6c6174657374)
 ========
 
 <a href="https://selenium.dev"><img src="https://selenium.dev/images/selenium_logo_square_green.png" width="180" alt="Selenium"/></a>
@@ -12,18 +12,18 @@ Get rid of using time delays
 
 ## Advantage
 
-##1.Simple easy syntax, Dont need to  remeber the whole selenium syntax and google it.It will call the required code acc to your need.ie: (browser=ie/chrome/firefox)
-##2.Dont need to download drivers for chrmoe/firefox/it it automatically download accc to your version in cache.
-##3.All commands are with explicit wait so dont need to use time sleep and slow your code or element not found error. It will wait untill element/page found.
-##4.select your option with partial text
-##5.Manage Window/Javascript alerts also.
-##6.Debug will print line by line what going inside.
-##7.Read element/elements its text and value automatically and print in debug mode and retun in packed list.
+### 1.Simple easy syntax, Dont need to  remeber the whole selenium syntax and google it.It will call the required code acc to your need.ie: (browser=ie/chrome/firefox)
+### 2.Dont need to download drivers for chrmoe/firefox/it it automatically download accc to your version in cache.
+### 3.All commands are with explicit wait so dont need to use time sleep and slow your code or element not found error. It will wait untill element/page found.
+### 4.select your option with partial text
+### 5.Manage Window/Javascript alerts also.
+### 6.Debug will print line by line what going inside.
+### 7.Read element/elements its text and value automatically and print in debug mode and retun in packed list.
 
 
 ## Documentation
-# www.step2success.in/easyselenium
-# https://pypi.org/project/easyselenium/
+## www.step2success.in/easyselenium
+## https://pypi.org/project/easyselenium/
 
 see examples folder for more details.
 
