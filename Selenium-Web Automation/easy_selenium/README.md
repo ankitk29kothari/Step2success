@@ -2,35 +2,7 @@ easyselenium
 
 *Let us handle the boring stuff!*
 
-+---------+---------------------------------------------------------------------------------------+
-| Docs    | .. image:: https://readthedocs.org/projects/pyapp/badge/?version=latest               |
-|         |    :target: https://docs.pyapp.info/                                                  |
-|         |    :alt: ReadTheDocs                                                                  |
-+---------+---------------------------------------------------------------------------------------+
-| Build   | .. image:: https://img.shields.io/travis/pyapp-org/pyapp.svg?style=flat               |
-|         |    :target: https://travis-ci.org/pyapp-org/pyapp                                     |
-|         |    :alt: Travis CI Status                                                             |
-+---------+---------------------------------------------------------------------------------------+
-| Quality | .. image:: https://api.codeclimate.com/v1/badges/58f9ffacb711c992610d/maintainability |
-|         |    :target: https://codeclimate.com/github/pyapp-org/pyapp/maintainability            |
-|         |    :alt: Maintainability                                                              |
-|         | .. image:: https://api.codeclimate.com/v1/badges/58f9ffacb711c992610d/test_coverage   |
-|         |    :target: https://codeclimate.com/github/pyapp-org/pyapp/test_coverage              |
-|         |    :alt: Test Coverage                                                                |
-|         | .. image:: https://img.shields.io/badge/code%20style-black-000000.svg                 |
-|         |    :target: https://github.com/ambv/black                                             |
-|         |    :alt: Once you go Black...                                                         |
-+---------+---------------------------------------------------------------------------------------+
-| Package | .. image:: https://img.shields.io/pypi/v/pyapp.svg                                    |
-|         |    :target: https://pypi.io/pypi/pyapp/                                               |
-|         |    :alt: Latest Version                                                               |
-|         | .. image:: https://img.shields.io/pypi/pyversions/pyapp.svg                           |
-|         |    :target: https://pypi.io/pypi/pyapp/                                               |
-|         | .. image:: https://img.shields.io/pypi/l/pyapp.svg                                    |
-|         |    :target: https://pypi.io/pypi/pyapp/                                               |
-|         | .. image:: https://img.shields.io/pypi/wheel/pyapp.svg                                |
-|         |    :target: https://pypi.io/pypi/pyapp/                                               |
-+---------+---------------------------------------------------------------------------------------+
+
 ========
 
 <a href="https://selenium.dev"><img src="https://selenium.dev/images/selenium_logo_square_green.png" width="180" alt="Selenium"/></a>
@@ -39,25 +11,25 @@ Now Automate your browser based projects in easily and faster.
 easyselenium is write on the top of selenium to make selenium easier for beginers for ready built in funtions only they need to call the functions and pass the arguments.All extra thing time delay and webdriver wait select findping xpath will do in backend.
 Get rid of using time delays
 
- [Apache 2.0 license](https://github.com/SeleniumHQ/selenium/blob/master/LICENSE).
+By Ankit Kothari [Apache 2.0 license](https://github.com/SeleniumHQ/selenium/blob/master/LICENSE).
 
 
 ## Advantage
 
-### 1.Simple easy syntax, Dont need to  remeber the whole selenium syntax and google it.It will call the required code acc to your need.ie: (browser=ie/chrome/firefox)
-### 2.Dont need to download drivers for chrmoe/firefox/it it automatically download accc to your version in cache.
-### 3.All commands are with explicit wait so dont need to use time sleep and slow your code or element not found error. It will wait untill element/page found.
-### 4.select your option with partial text
-### 5.Manage Window/Javascript alerts also.
-### 6.Debug will print line by line what going inside.
-### 7.Read element/elements its text and value automatically and print in debug mode and retun in packed list.
+* 1.Simple easy syntax, Dont need to  remeber the whole selenium syntax and google it.It will call the required code acc to your need.ie: (browser=ie/chrome/firefox)
+* 2.Dont need to download drivers for chrmoe/firefox/it it automatically download accc to your version in cache.
+* 3.All commands are with explicit wait so dont need to use time sleep and slow your code or element not found error. It will wait untill element/page found.
+* 4.select your option with partial text
+* 5.Manage Window/Javascript alerts also.
+* 6.Debug will print line by line what going inside.
+* 7.Read element/elements its text and value automatically and print in debug mode and retun in packed list.
 
 
 ## Documentation
-## www.step2success.in/easyselenium
-## https://pypi.org/project/easyselenium/
+* www.step2success.in/easyselenium
+* https://pypi.org/project/easyselenium/
 
-see examples folder for more details.
+* [examples](https://github.com/ankitk29kothari/Step2success/tree/master/Selenium-Web%20Automation/easy_selenium/Examples)
 
 ## from easy selenium import *
 
