@@ -12,18 +12,18 @@ Get rid of using time delays
 
 ## Advantage
 
-##1.Simple easy syntax, Dont need to  remeber the whole selenium syntax and google it.It will call the required code acc to your need.ie: (browser=ie/chrome/firefox)
-##2.Dont need to download drivers for chrmoe/firefox/it it automatically download accc to your version in cache.
-##3.All commands are with explicit wait so dont need to use time sleep and slow your code or element not found error. It will wait untill element/page found.
-##4.select your option with partial text
-##5.Manage Window/Javascript alerts also.
-##6.Debug will print line by line what going inside.
-##7.Read element/elements its text and value automatically and print in debug mode and retun in packed list.
+### 1.Simple easy syntax, Dont need to  remeber the whole selenium syntax and google it.It will call the required code acc to your need.ie: (browser=ie/chrome/firefox)
+### 2.Dont need to download drivers for chrmoe/firefox/it it automatically download accc to your version in cache.
+### 3.All commands are with explicit wait so dont need to use time sleep and slow your code or element not found error. It will wait untill element/page found.
+### 4.select your option with partial text
+### 5.Manage Window/Javascript alerts also.
+### 6.Debug will print line by line what going inside.
+### 7.Read element/elements its text and value automatically and print in debug mode and retun in packed list.
 
 
 ## Documentation
-# www.step2success.in/easyselenium
-# https://pypi.org/project/easyselenium/
+## www.step2success.in/easyselenium
+## https://pypi.org/project/easyselenium/
 
 see examples folder for more details.
 
