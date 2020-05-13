@@ -1,4 +1,36 @@
-easyselenium ![Travis Status](https://camo.githubusercontent.com/28d47643ab6946aa29704c589687a64a47b9d5f1/68747470733a2f2f7472617669732d63692e6f72672f63616c6c7369676e2d76697065722f466c61736b2d5a69707065722e7376673f6272616e63683d6d6173746572) ![AppVeyor Status](https://camo.githubusercontent.com/71826362d1ae41f71a610f65ef803b3c67d86856/68747470733a2f2f72656164746865646f63732e6f72672f70726f6a656374732f666c61736b2d7a69707065722f62616467652f3f76657273696f6e3d6c6174657374)
+easyselenium 
+
+*Let us handle the boring stuff!*
+
++---------+---------------------------------------------------------------------------------------+
+| Docs    | .. image:: https://readthedocs.org/projects/pyapp/badge/?version=latest               |
+|         |    :target: https://docs.pyapp.info/                                                  |
+|         |    :alt: ReadTheDocs                                                                  |
++---------+---------------------------------------------------------------------------------------+
+| Build   | .. image:: https://img.shields.io/travis/pyapp-org/pyapp.svg?style=flat               |
+|         |    :target: https://travis-ci.org/pyapp-org/pyapp                                     |
+|         |    :alt: Travis CI Status                                                             |
++---------+---------------------------------------------------------------------------------------+
+| Quality | .. image:: https://api.codeclimate.com/v1/badges/58f9ffacb711c992610d/maintainability |
+|         |    :target: https://codeclimate.com/github/pyapp-org/pyapp/maintainability            |
+|         |    :alt: Maintainability                                                              |
+|         | .. image:: https://api.codeclimate.com/v1/badges/58f9ffacb711c992610d/test_coverage   |
+|         |    :target: https://codeclimate.com/github/pyapp-org/pyapp/test_coverage              |
+|         |    :alt: Test Coverage                                                                |
+|         | .. image:: https://img.shields.io/badge/code%20style-black-000000.svg                 |
+|         |    :target: https://github.com/ambv/black                                             |
+|         |    :alt: Once you go Black...                                                         |
++---------+---------------------------------------------------------------------------------------+
+| Package | .. image:: https://img.shields.io/pypi/v/pyapp.svg                                    |
+|         |    :target: https://pypi.io/pypi/pyapp/                                               |
+|         |    :alt: Latest Version                                                               |
+|         | .. image:: https://img.shields.io/pypi/pyversions/pyapp.svg                           |
+|         |    :target: https://pypi.io/pypi/pyapp/                                               |
+|         | .. image:: https://img.shields.io/pypi/l/pyapp.svg                                    |
+|         |    :target: https://pypi.io/pypi/pyapp/                                               |
+|         | .. image:: https://img.shields.io/pypi/wheel/pyapp.svg                                |
+|         |    :target: https://pypi.io/pypi/pyapp/                                               |
++---------+---------------------------------------------------------------------------------------+
 ========
 
 <a href="https://selenium.dev"><img src="https://selenium.dev/images/selenium_logo_square_green.png" width="180" alt="Selenium"/></a>
