@@ -1,108 +1,151 @@
-easySelenium [![Travis Status](https://travis-ci.com/SeleniumHQ/selenium.svg?branch=master)](//travis-ci.com/SeleniumHQ/selenium/builds) [![AppVeyor Status](https://ci.appveyor.com/api/projects/status/pg1f99p1aetp9mk9/branch/master?svg=true)](https://ci.appveyor.com/project/SeleniumHQ/selenium/branch/master)
+easySelenium [![Travis Status](https://camo.githubusercontent.com/28d47643ab6946aa29704c589687a64a47b9d5f1/68747470733a2f2f7472617669732d63692e6f72672f63616c6c7369676e2d76697065722f466c61736b2d5a69707065722e7376673f6272616e63683d6d6173746572) [![AppVeyor Status](https://camo.githubusercontent.com/71826362d1ae41f71a610f65ef803b3c67d86856/68747470733a2f2f72656164746865646f63732e6f72672f70726f6a656374732f666c61736b2d7a69707065722f62616467652f3f76657273696f6e3d6c6174657374)
 ========
+Now Automate your browser based projects in easily and faster.
 <a href="https://selenium.dev"><img src="https://selenium.dev/images/selenium_logo_square_green.png" width="180" alt="Selenium"/></a>
 
-easyselenium is write on the top of selenium to make selenium easier for begineers for ready built in funtions only they need to call the functions and pass the arguments.All extra thing time delay and webdriver wait select findping xpath will do in backend.
+easyselenium is write on the top of selenium to make selenium easier for beginers for ready built in funtions only they need to call the functions and pass the arguments.All extra thing time delay and webdriver wait select findping xpath will do in backend.
 Get rid of using time delays
 
-The project is made possible by volunteer contributors who've
-generously donated thousands of hours in code development and upkeep.
+ [Apache 2.0 license](https://github.com/SeleniumHQ/selenium/blob/master/LICENSE).
 
-Selenium's source code is made available under the [Apache 2.0 license](https://github.com/SeleniumHQ/selenium/blob/master/LICENSE).
+
+## Advantage
+
+1.Simple easy syntax, Dont need to  remeber the whole selenium syntax and google it.It will call the required code acc to your need.ie: (browser=ie/chrome/firefox)
+2.Dont need to download drivers for chrmoe/firefox/it it automatically download accc to your version in cache.
+3.All commands are with explicit wait so dont need to use time sleep and slow your code or element not found error. It will wait untill element/page found.
+4.select your option with partial text
+5.Manage Window/Javascript alerts also.
+6.Debug will print line by line what going inside.
+7.Read element/elements its text and value automatically and print in debug mode and retun in packed list.
+
 
 ## Documentation
+www.step2success.in/easyselenium
+https://pypi.org/project/easyselenium/
 
 
 ## from easy selenium import *
-## open_browser()
+
+
+##1. open_browser()
 ```sh
 with optional arguments
 
-headless = True/False (to work without browser)
-path = 'your drirectory by default is default directory'
-browser = 'chrome'/'firefox'/ie
-debug = True/False (to print what is happening inside the code)
+open_browser(browser='chrome/firefox/ie',headless=True/False,debug=True/False)
 
-Example
-This is by default arguments
-
-## open_browser(headless=False,path="chromedriver.exe",browser='chrome',debug=False)
+By default
+by default time: Explicit wait is 50 sec for every function
+Change from passing(timeout=1)
+## open_browser(headless=False,,browser='chrome',debug=False,path=chache memory to download drivers)
 ```
 
-## open_url(url='www.google.in')
+
+
+##2.connect_exisitng_browser(url,session_id)
+```sh
+pass url nad seesion id from your existing browser which is printed when you call browser.
+```
+
+
+
+##3.open_url(url='https://step2success.in')
 ```sh
 with optional arguments
-
-url = 'your web url'
+open_url(url='https://step2success.in',new_tab=False)
 new_tab = True/False (open in new tab or same)
-Example
-This is by default arguments
 
-## open_url(url='www.step2success.in',new_tab=True)
 ```
 
 
-## window_handle(no=1)
+##4.window_handle(no=1)
+window_handle(title='google')
 ```sh
 To switch to your popup or another tab window ()
-by default time to wait is 50 sec
+
 
 ```
 
-## switch_frame (no=1 or name='mainframe')
+##5.switch_frame (no=1 or name='mainframe')
 ```sh
 To switch to iframe or frame with no or name
-by default time to wait is 50 sec
+switch_frame(no=1 / name='mainframe'/id='name'/css='btn-danger'/ xpath='class=btn-pop'/xpath='//[div[3]/article/div[1]]')
 ```
 
 
-## click_on (text='submit'or image='imagepath' or id='submit' or css='send' or xpath='this')
+##6.click_on (text='submit'or image='imagepath' or id='submit' or css='send' or xpath='this')
 To Click on buton based on iamge/Text or xpath
-by default time to wait is 50 sec
+
 ```sh
 with optional arguments
+click_on(no=1 / name='mainframe'/id='name'/css='btn-danger'/ xpath='class=btn-pop'/xpath='//[div[3]/article/div[1]]')
 
-repeat=True/False (True-To double click on item)
+repeat=True/False (True- To double click on item)
 ```
 
 
-## send_text (text='your text' with  id='submit' or css='send' or xpath='this')
+##7.mosue_hover (text='submit'or image='imagepath' or id='submit' or css='send' or xpath='this')
+```sh
+To hover mouse on avascript element instead of click
+```
+
+
+
+##8.send_text (text='your text' with  id='submit' or css='send' or xpath='this')
 ```shTo send text to block
-by default time to wait is 50 sec
+
 ```sh
 with optional arguments
+send_text(no=1 / name='mainframe'/id='name'/css='btn-danger'/ xpath='class=btn-pop'/xpath='//[div[3]/article/div[1]]')
 
 with_enter=True/False (True-To enter after type text)
 ```
 
-## select_dropdown (option ='option to select' with  id='submit' or css='send' or xpath='this')
+##9.select_dropdown (option ='option to select' with  id='submit' or css='send' or xpath='this')
 ```sh
 To select option in dropdown with partial text
-by default time to wait is 50 sec
+select_dropdown(no=1 / name='mainframe'/id='name'/css='btn-danger'/ xpath='class=btn-pop'/xpath='//[div[3]/article/div[1]]')
 ```
 
 
-## read_text (id='submit' or css='send' or xpath='this')
+##10.read_text (id='submit' or css='send' or xpath='this')
 ```sh
 To read text from element/multiple elements
 It is samrt enough to automatically detect if single or multiple element is present
 Value/Text is present
 
-Then return you a list of elemnts with tuple insde it containing text,value and session_id
-by default time to wait is 50 sec
+Then return you a packed list of elemnts  containing text,value and session_id
+read_text(no=1 / name='mainframe'/id='name'/css='btn-danger'/ xpath='class=btn-pop'/xpath='//[div[3]/article/div[1]]')
 ```
 
-## close_window (no=1)
+
+
+##11.close_window (no=1 or name='yahoo')
 ```sh
 To switch and close the provided window
 optional switch_to=0
 to switch to this window after closing
 ```
 
-## alerts (text='yes'/'no'/'custom'/blank to read it text)
+
+
+##12.windows_alert (text='NA',with_enter=False)
+```sh
+To send text or enter to accept to windows authentication
+```
+
+
+##14.alerts (text='yes'/'no'/'custom'/blank to read it text)
 ```sh
 To accept/decline/send text/read text from alert box
 ```
+
+
+##15.page_source ()
+```sh
+To print raw HTML
+```
+
 
 
 Example :

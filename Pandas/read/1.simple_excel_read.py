@@ -7,3 +7,5 @@ df=pandas.read_excel("input.xlsx")
 #print the whole file
 #print(type of data set)
 print(df,type(df))
+
+print(df.iat[1, 2])
