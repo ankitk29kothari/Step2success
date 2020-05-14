@@ -1248,7 +1248,6 @@ JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
-: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
@@ -1283,6 +1282,12 @@ JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 22216, Gecko_IOThread] WARNING: file z:/task_1588189409/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+[Parent 22216, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1588189409/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 348
+[C[Parent 22216, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1588189409/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 348
+1589398505300	Marionette	INFO	Stopped listening on port 56613
+LURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
@@ -1304,48 +1309,6 @@ JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
@@ -1409,6 +1372,62 @@ JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1E00A0,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1E008F,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1E00A0,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1E008F,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x350119,name=PContent::Msg_AsyncMessage) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1E00A0,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1E008F,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1E00A0,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1E008F,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 22284, Gecko_IOThread] WARNING: file z:/task_1588189409/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+[Parent 22284, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1588189409/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 348
+[Parent 22284, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1588189409/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 348
+[Parent 22284, Gecko_IOThread] WARNING: file z:/task_1588189409/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+ERROR_FAILURE
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: NS_ERROR_FAILURE
+JavaScript error: , line 0: NS_ERROR_FAILURE
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1E0074,name=PBrowser::Msg_StopIMEStateManagement) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1E00A0,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1E008F,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 25440, Gecko_IOThread] WARNING: file z:/task_1588189409/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+[Parent 25440, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1588189409/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 348
+1589398497515	Marionette	INFO	Stopped listening on port 56821
+pt error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
@@ -1439,33 +1458,25 @@ JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
 JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-JavaScript error: , line 0: NS_ERROR_FAILURE
-"-no-remote" "-profile" "C:\\Users\\mcjp2518\\AppData\\Local\\Temp\\rust_mozprofileGfmBsd"
-1589309117488	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
-1589309117489	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
-1589309117489	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
-1589309117489	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
-JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1325: uncaught exception: 2147746065
-JavaScript error: undefined, line 14: Error: An unexpected error occurred
-JavaScript error: moz-extension://d7039da8-5e79-47e4-9a13-8c6142d0aa0b/lib/picture_in_picture_overrides.js, line 15: Error: Incorrect argument types for pictureInPictureParent.setOverrides.
-1589309122818	Marionette	INFO	Listening on port 57654
-1589309122991	Marionette	WARN	TLS certificate errors will be ignored for this session
-JavaScript warning: https://step2success.in/wp-content/plugins/learnpress/assets/js/frontend/course.js?nocache=1589309124.4966&ver=3.2.5.6, line 244: unreachable code after return statement
-[Parent 28076, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1588189409/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 348
-[Parent 28076, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_11589309145233	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
-1589309145234	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
-1589309145234	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
-1589309145235	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
-JavaScript error: resource:///modules/sessionstore/SessionStore.jsm, line 1325: uncaught exception: 2147746065
-JavaScript error: undefined, line 14: Error: An unexpected error occurred
-JavaScript error: moz-extension://91dff1d1-b3eb-4446-a337-1e11169c449d/lib/picture_in_picture_overrides.js, line 15: Error: Incorrect argument types for pictureInPictureParent.setOverrides.
-1589309151312	Marionette	INFO	Listening on port 57696
-1589309151683	Marionette	WARN	TLS certificate errors will be ignored for this session
-JavaScript warning: https://step2success.in/wp-content/plugins/learnpress/assets/js/frontend/course.js?nocache=1589309153.0649&ver=3.2.5.6, line 244: unreachable code after return statement
-JavaScript warning: https://step2success.in/wp-content/plugins/learnpress/assets/js/frontend/course.js?nocache=1589309155.7397&ver=3.2.5.6, line 244: unreachable code after return statement
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1E0074,name=PBrowser::Msg_StopIMEStateManagement) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1E00A0,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1E008F,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 25732, Gecko_IOThread] WARNING: file z:/task_1588189409/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+[Parent 25732, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1588189409/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 348
+[Child 8612, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1588189409/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 348
+[Child 8612, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1588189409/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 348
+[Parent 25732, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1588189409/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 348
+[Child 16952, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1588189409/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 348
+[Chil[Parent 25732, Gecko_IOThread] WARNING: file z:/task_1588189409/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+1589398494723	Marionette	INFO	Stopped listening on port 56876
+://step2success.in/wp-content/plugins/learnpress/assets/js/frontend/course.js?nocache=1589309155.7397&ver=3.2.5.6, line 244: unreachable code after return statement
 [Parent 12336, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1588189409/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 348
 [Child 19564, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1588189409/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 348
 [Ch1589309278911	Marionette	INFO	Stopped listening on port 57696

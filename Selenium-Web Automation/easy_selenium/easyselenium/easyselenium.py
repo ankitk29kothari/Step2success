@@ -78,17 +78,17 @@ def open_browser(headless=False,path="",browser='chrome',debug=True,auto_upgrade
 		if headless:
 			options.headless = True
 		driver = webdriver.Firefox(executable_path=GeckoDriverManager(path=path).install(),options=options)
-		driver.manage().window().maximize();
+		driver.maximize_window()
 
 		
 	elif browser.lower()=='ie':
-		from selenium.webdriver.firefox.options import Options
+		from selenium.webdriver.ie.options import Options
 		options = Options()
 		from webdriver_manager.microsoft import IEDriverManager
 		if headless:
 			options.headless = True
 		driver = webdriver.Ie(IEDriverManager().install(),options=options)
-		driver.manage().window().maximize();
+		driver.maximize_window()
 		
 
 	elif browser.lower()=='edge':
@@ -103,7 +103,7 @@ def open_browser(headless=False,path="",browser='chrome',debug=True,auto_upgrade
 
 	url = driver.command_executor._url       #"http://127.0.0.1:60622/hub"
 	session_id = driver.session_id
-	print('\nuse this to connect_exisitng_browser(url=',url,'session_id=',session_id,')\n\n')
+	print("\nuse this to connect_exisitng_browser(url='{}',session_id='{}')\n\n".format(url,session_id))
 	return(driver)
 		
 
@@ -112,15 +112,18 @@ def open_browser(headless=False,path="",browser='chrome',debug=True,auto_upgrade
 
 
 def connect_exisitng_browser(url,session_id):
+	global driver
 	driver = webdriver.Remote(command_executor=url,desired_capabilities={})
-	driver.session_id = "session_id"
+	driver.session_id = session_id
 	print("connecting existing browser")
+	return(driver)
 
 
 ###############################################################################
 
-def open_url(url='https://step2success.in',new_tab=False):
+def open_url(url='https://step2success.in',new_tab=False,debug=True):
 	
+	debugs=debug=True
 	if new_tab:
 		url=str(url)
 		driver.execute_script("window.open('{}','_blank');".format(url))
@@ -381,7 +384,7 @@ def read_text(xpath=False,timeout=50,**kwargs):
 			elements4=driver.find_elements_by_xpath('{}'.format(xpath))
 	else:
 		key=(list(kwargs.keys())[0])
-		value=kwargs[value]
+		value=kwargs[key]
 		element4 = WebDriverWait(driver, timeout).until(EC.presence_of_element_located((By.XPATH, '//*[@{}="{}"]'.format(key,value))))
 		elements4=driver.find_elements_by_xpath('//*[@{}="{}"]'.format(key,value))
 
