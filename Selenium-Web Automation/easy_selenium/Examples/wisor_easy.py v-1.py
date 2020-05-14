@@ -1,5 +1,3 @@
-#Step2success.in
-
 from easyselenium import *
 
 open_browser(headless=False,browser='firefox',debug=True)

@@ -11,9 +11,9 @@ import time
 
 from easyselenium import *
 import time
-open_browser(path="chromedriver.exe",browser='chrome',debug=True)
-#open_broswer(executable_path=r"chromedriver.exe",browser='firefox')
-#open_broswer(executable_path=r"chromedriver.exe",browser='ie')
+open_browser(browser='ie',debug=True)
+#open_broswer(browser='firefox')
+#open_broswer(browser='ie')
 #open_broswer(browser='chrome',headless=True)
 
 open_url(url="https://step2success.in/registration-page-demo/")

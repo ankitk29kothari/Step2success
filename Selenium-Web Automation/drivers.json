@@ -3,12 +3,12 @@
         "latest_version": "81.0.4044.138",
         "timestamp": "14/05/2020"
     },
-    "geckodriver": {
-        "latest_version": "v0.26.0",
-        "timestamp": "12/05/2020"
-    },
     "IEDriverServer": {
         "latest_version": "3.150.1",
+        "timestamp": "14/05/2020"
+    },
+    "geckodriver": {
+        "latest_version": "v0.26.0",
         "timestamp": "14/05/2020"
     }
 }

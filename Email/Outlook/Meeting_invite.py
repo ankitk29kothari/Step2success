@@ -2,7 +2,7 @@ import win32com.client
 outlook = win32com.client.Dispatch("Outlook.Application")
 
 
-def sendMeeting(start_time,duration,subject,reason):
+def sendMeeting(start_time,duration,subject,reason,to):
 
 	  appt = outlook.CreateItem(1) # AppointmentItem
 	  print(start_time)
@@ -13,7 +13,7 @@ def sendMeeting(start_time,duration,subject,reason):
 	  appt.MeetingStatus = 1 # 1 - olMeeting; Changing the appointment to meeting. Only after changing the meeting status recipients can be added
 	  appt.Body = "HI ALL,"+'\n\n'+'\n\n'+reason
 	  
-	  appt.Recipients.Add('ankit.kothari@orange.com') 
+	  appt.Recipients.Add(to) 
 	  appt.Save()
 	  appt.Send()
 
@@ -22,7 +22,7 @@ def sendMeeting(start_time,duration,subject,reason):
 
 
 #calling function
-sendMeeting('2020-04-05 15:33',60,'na','naaaaa')
+sendMeeting('2020-04-05 15:33',60,'na','naaaaa','ankit.kothari@hotmail.com')
 
 
 

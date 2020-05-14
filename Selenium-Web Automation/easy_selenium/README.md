@@ -3,7 +3,9 @@ easyselenium
 *Let us handle the boring stuff!*
 
 
-========
+====================
+www.step2success.in
+====================
 
 <a href="https://selenium.dev"><img src="https://selenium.dev/images/selenium_logo_square_green.png" width="180" alt="Selenium"/></a>
 Now Automate your browser based projects in easily and faster.
@@ -17,7 +19,7 @@ By Ankit Kothari [Apache 2.0 license](https://github.com/SeleniumHQ/selenium/blo
 ## Advantage
 
 * 1.Simple easy syntax, Dont need to  remeber the whole selenium syntax and google it.It will call the required code acc to your need.ie: (browser=ie/chrome/firefox)
-* 2.Dont need to download drivers for chrmoe/firefox/it it automatically download accc to your version in cache.
+* 2.Dont need to download drivers for chrmoe/firefox/it it automatically download accc to your version in cache/your desired path.
 * 3.All commands are with explicit wait so dont need to use time sleep and slow your code or element not found error. It will wait untill element/page found.
 * 4.select your option with partial text
 * 5.Manage Window/Javascript alerts also.
@@ -43,7 +45,7 @@ open_browser(browser='chrome/firefox/ie',headless=True/False,debug=True/False)
 By default
 by default time: Explicit wait is 50 sec for every function
 Change from passing(timeout=1)
-## open_browser(headless=False,,browser='chrome',debug=False,path=chache memory to download drivers)
+## open_browser(headless=False,,browser='chrome',debug=False,path=cache memory to download drivers/or your customised path)
 ```
 
 
@@ -162,8 +164,8 @@ import time
 from easyselenium import *
 import time
 open_browser(path="chromedriver.exe",browser='chrome',debug=True)
-#open_broswer(executable_path=r"chromedriver.exe",browser='firefox')
-#open_broswer(executable_path=r"chromedriver.exe",browser='ie')
+#open_broswer(browser='firefox')
+#open_broswer(browser='ie')
 #open_broswer(browser='chrome',headless=True)
 
 open_url(url="https://step2success.in/registration-page-demo/")

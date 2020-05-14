@@ -27,12 +27,14 @@ releases = json.loads(request.urlopen(url).read())['releases']
 print( sorted(releases, key=parse_version, reverse=True)  )  
 """
 
+#import subprocess
+#subprocess.call(["pip","install","--upgrade","easyselenium"])
 
 
 print('Documentation & Examples: \n\nhttps://pypi.org/project/easyselenium/  \nwww.step2success.in/easyselenium                \n \ncall easyselenium_help()\n')
 print('')
 
-	
+
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -51,9 +53,10 @@ global driver
 #####################################################################################################
 
 
-def open_browser(headless=False,path="",browser='chrome',debug=True,auto_upgrade=False):
+def open_browser(headless=False,path="",browser='chrome',debug=True,auto_upgrade=True):
 	global driver
 	global debugs
+
 	debugs=debug
 
 
@@ -82,23 +85,18 @@ def open_browser(headless=False,path="",browser='chrome',debug=True,auto_upgrade
 
 		
 	elif browser.lower()=='ie':
-		from selenium.webdriver.ie.options import Options
-		options = Options()
+		
 		from webdriver_manager.microsoft import IEDriverManager
-		if headless:
-			options.headless = True
-		driver = webdriver.Ie(IEDriverManager().install(),options=options)
+		driver = webdriver.Ie(IEDriverManager(path=path).install())
 		driver.maximize_window()
 		
 
 	elif browser.lower()=='edge':
 		from webdriver_manager.microsoft import EdgeChromiumDriverManager
-		driver = webdriver.Edge(EdgeChromiumDriverManager().install())
+		driver = webdriver.Edge(EdgeChromiumDriverManager(path=path).install())
 
 
-	if auto_upgrade:
-		import subprocess
-		subprocess.call(["pip","install","--upgrade","easyselenium"])
+	
 
 
 	url = driver.command_executor._url       #"http://127.0.0.1:60622/hub"
@@ -120,7 +118,15 @@ def connect_exisitng_browser(url,session_id):
 
 
 ###############################################################################
+def autoupgrade():
+		
+	import os
+	stdout=os.popen("pip install --upgrade easyselenium").read()
+	if debugs:
+		print('Checking for easyselenium updates')
 
+
+###############################################################################
 def open_url(url='https://step2success.in',new_tab=False,debug=True):
 	
 	debugs=debug=True
@@ -130,9 +136,12 @@ def open_url(url='https://step2success.in',new_tab=False,debug=True):
 		print("opening url in new tab Title: ",driver.title,'\n')
 		return()
 	else:
-		driver.get(url)
-		if debugs:
-			print("opening url \n** for New Tab use: new_tab=True\n")
+		import concurrent.futures
+		with concurrent.futures.ThreadPoolExecutor(max_workers = 500) as executor:
+			a=executor.submit(autoupgrade)
+			driver.get(url)
+			if debugs:
+				print("opening url \n** for New Tab use: new_tab=True\n")
 
 	
 

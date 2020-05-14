@@ -6,14 +6,14 @@
 # Selenium is used for Gui testing as well as we can use it for web scrapping and web automation to fill up forms in complex sites and tools.
 #pip install selenium        
 
-#improting selenium driver(always copy paste all this function to minimse hassle)
+
 import time
 
 from easyselenium import *
 import time
-open_browser(path="chromedriver.exe",browser='chrome',debug=True)
-#open_broswer(executable_path=r"chromedriver.exe",browser='firefox')
-#open_broswer(executable_path=r"chromedriver.exe",browser='ie')
+open_browser(browser='chrome',debug=True,path=r'C:\Users\mcjp2518\Desktop\step2successs\Step2success\Selenium-Web Automation\easy_selenium\easyselenium')
+#open_broswer(browser='firefox')
+#open_broswer(browser='ie')
 #open_broswer(browser='chrome',headless=True)
 
 open_url(url="https://step2success.in/registration-page-demo/")
