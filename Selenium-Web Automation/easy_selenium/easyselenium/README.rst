@@ -56,6 +56,10 @@ So what do we handle?
 
 
 
+- SMTP - `pyapp.SMTP`_
+- Boto3 - `pyapp.boto3`_
+
+
 
 
 
