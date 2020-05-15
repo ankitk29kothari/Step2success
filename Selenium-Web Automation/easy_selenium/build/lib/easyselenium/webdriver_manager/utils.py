@@ -56,7 +56,7 @@ def write_file(content, path):
 
 
 def download_driver(url):
-    console("Trying to download new driver")
+    console("Trying to download new driver from {}".format(url))
     response = requests.get(url, stream=True)
     validate_response(response)
     return response

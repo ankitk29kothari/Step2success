@@ -1,7 +1,7 @@
 import os
 
-from webdriver_manager.driver_cache import DriverCache
-from webdriver_manager.utils import download_driver
+from easyselenium.webdriver_manager.driver_cache import DriverCache
+from easyselenium.webdriver_manager.utils import download_driver
 
 
 class DriverManager(object):

@@ -3,8 +3,8 @@ import glob
 import json
 import os
 
-from webdriver_manager.archive import extract_zip, extract_tar_file
-from webdriver_manager.utils import write_file, get_filename_from_response, \
+from easyselenium.webdriver_manager.archive import extract_zip, extract_tar_file
+from easyselenium.webdriver_manager.utils import write_file, get_filename_from_response, \
     console, get_date_diff
 
 
@@ -32,8 +32,6 @@ class DriverCache(object):
                                      recursive=True)]
 
     def __find_file(self, paths, name, version, os_type):
-        #print('OS: ',os_type)
-        
         console(f"Looking for [{name} {version} {os_type}] driver in cache ")
         if len(name) == 0 or len(version) == 0:
             return None
@@ -42,8 +40,7 @@ class DriverCache(object):
         #   name += ".exe"
 
         for path in paths:
-            
-            if os.path.isfile(path) and (path.endswith(name)or  path.endswith(name+'.exe')):
+            if os.path.isfile(path) and (path.endswith(name)or path.endswith(name+'.exe') ):
                 console("File found in cache by path [{}]".format(path))
                 return path
         return None
@@ -64,7 +61,6 @@ class DriverCache(object):
         file_path = os.path.join(driver_path, filename)
         write_file(response.content, file_path)
         files = self.__unpack(file_path)
-        #print(os_type)
         if "win" in os_type:
             for item in files:
                 if item.endswith('.exe'):
@@ -92,7 +88,7 @@ class DriverCache(object):
             dates_diff = get_date_diff(driver_data['timestamp'],
                                        datetime.date.today(),
                                        self._date_format)
-            return dates_diff < 1
+            return dates_diff < 30
 
         return False
 
@@ -109,7 +105,7 @@ class DriverCache(object):
         return {}
 
     def __unpack(self, path, to_directory=None):
-        #console("Unpack archive {}".format(path))
+        console("Unpack archive {}".format(path))
         if not to_directory:
             to_directory = os.path.dirname(path)
         if path.endswith(".zip"):

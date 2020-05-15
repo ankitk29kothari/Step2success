@@ -1,9 +1,9 @@
 import logging
 
-from webdriver_manager import utils
-from webdriver_manager.driver import IEDriver
-from webdriver_manager.manager import DriverManager
-from webdriver_manager.driver import EdgeChromiumDriver
+from easyselenium.webdriver_manager import utils
+from easyselenium.webdriver_manager.driver import IEDriver
+from easyselenium.webdriver_manager.manager import DriverManager
+from easyselenium.webdriver_manager.driver import EdgeChromiumDriver
 
 
 class IEDriverManager(DriverManager):
@@ -15,7 +15,6 @@ class IEDriverManager(DriverManager):
                  latest_release_url=None,
                  log_level=None):
         super().__init__(path, log_level)
-   
         self.driver = IEDriver(version=version,
                                os_type=os_type,
                                name=name,
@@ -35,8 +34,6 @@ class EdgeChromiumDriverManager(DriverManager):
                  latest_release_url="https://msedgedriver.azureedge.net/"
                                     "LATEST_STABLE",
                  log_level=None):
-   
-
         super().__init__(path, log_level)
         self.driver = EdgeChromiumDriver(version=version,
                                          os_type=os_type,

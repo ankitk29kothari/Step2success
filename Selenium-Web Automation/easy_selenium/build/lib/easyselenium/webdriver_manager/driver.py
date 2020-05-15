@@ -4,7 +4,7 @@ from xml.etree import ElementTree
 
 import requests
 
-from webdriver_manager.utils import validate_response, console, \
+from easyselenium.webdriver_manager.utils import validate_response, console, \
     chrome_version, ChromeType
 
 

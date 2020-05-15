@@ -1,6 +1,6 @@
 from easyselenium import *
 
-open_browser(headless=False,browser='firefox',debug=True)
+open_browser(headless=False,browser='chrome',debug=True)
 
 open_url(url="https://vfoprod-elink.activationnow.com/login.jsp")
 

@@ -1,8 +1,8 @@
 import logging
 
-from webdriver_manager import utils
-from webdriver_manager.driver import GeckoDriver
-from webdriver_manager.manager import DriverManager
+from easyselenium.webdriver_manager import utils
+from easyselenium.webdriver_manager.driver import GeckoDriver
+from easyselenium.webdriver_manager.manager import DriverManager
 
 
 class GeckoDriverManager(DriverManager):

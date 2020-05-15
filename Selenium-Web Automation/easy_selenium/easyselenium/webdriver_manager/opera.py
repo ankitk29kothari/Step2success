@@ -1,8 +1,8 @@
 import os
 
-from webdriver_manager import utils
-from webdriver_manager.driver import OperaDriver
-from webdriver_manager.manager import DriverManager
+from easyselenium.webdriver_manager import utils
+from easyselenium.webdriver_manager.driver import OperaDriver
+from easyselenium.webdriver_manager.manager import DriverManager
 
 
 class OperaDriverManager(DriverManager):

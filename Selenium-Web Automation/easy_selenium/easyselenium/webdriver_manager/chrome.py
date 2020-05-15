@@ -1,9 +1,9 @@
 import os
 
-from webdriver_manager import utils
-from webdriver_manager.driver import ChromeDriver
-from webdriver_manager.manager import DriverManager
-from webdriver_manager.utils import ChromeType
+from easyselenium.webdriver_manager import utils
+from easyselenium.webdriver_manager.driver import ChromeDriver
+from easyselenium.webdriver_manager.manager import DriverManager
+from easyselenium.webdriver_manager.utils import ChromeType
 
 
 class ChromeDriverManager(DriverManager):

@@ -6,12 +6,12 @@
 # Selenium is used for Gui testing as well as we can use it for web scrapping and web automation to fill up forms in complex sites and tools.
 #pip install selenium        
 
-#improting selenium driver(always copy paste all this function to minimse hassle)
+
 import time
 
 from easyselenium import *
 import time
-open_browser(browser='ie',debug=True)
+open_browser(browser='chrome',debug=True)
 #open_broswer(browser='firefox')
 #open_broswer(browser='ie')
 #open_broswer(browser='chrome',headless=True)

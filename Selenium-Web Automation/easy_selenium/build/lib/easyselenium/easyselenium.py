@@ -62,7 +62,7 @@ def open_browser(headless=False,path="",browser='chrome',debug=True,auto_upgrade
 
 	if browser.lower()=='chrome':
 		chrome_options = webdriver.ChromeOptions()
-		from webdriver_manager.chrome import ChromeDriverManager
+		from easyselenium.webdriver_manager.chrome import ChromeDriverManager
 
 
 		if headless:
@@ -77,7 +77,7 @@ def open_browser(headless=False,path="",browser='chrome',debug=True,auto_upgrade
 		from selenium.webdriver.firefox.options import Options
 		options = Options()
 
-		from webdriver_manager.firefox import GeckoDriverManager
+		from easyselenium.webdriver_manager.firefox import GeckoDriverManager
 		if headless:
 			options.headless = True
 		driver = webdriver.Firefox(executable_path=GeckoDriverManager(path=path).install(),options=options)
@@ -86,13 +86,13 @@ def open_browser(headless=False,path="",browser='chrome',debug=True,auto_upgrade
 		
 	elif browser.lower()=='ie':
 		
-		from webdriver_manager.microsoft import IEDriverManager
+		from easyselenium.webdriver_manager.microsoft import IEDriverManager
 		driver = webdriver.Ie(IEDriverManager(path=path).install())
 		driver.maximize_window()
 		
 
 	elif browser.lower()=='edge':
-		from webdriver_manager.microsoft import EdgeChromiumDriverManager
+		from easyselenium.webdriver_manager.microsoft import EdgeChromiumDriverManager
 		driver = webdriver.Edge(EdgeChromiumDriverManager(path=path).install())
 
 
