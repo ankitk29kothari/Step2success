@@ -6,11 +6,11 @@ pyApp - A python application framework
 
 +---------+---------------------------------------------------------------------------------------+
 | Docs    | .. image:: https://readthedocs.org/projects/pyapp/badge/?version=latest               |
-|         |    :target: https://step2success.in/                                                  |
+|         |    :target: https://docs.pyapp.info/                                                  |
 |         |    :alt: ReadTheDocs                                                                  |
 +---------+---------------------------------------------------------------------------------------+
 | Build   | .. image:: https://img.shields.io/travis/pyapp-org/pyapp.svg?style=flat               |
-|         |    :target: https://step2success.in/                                     |
+|         |    :target: https://travis-ci.org/pyapp-org/pyapp                                     |
 |         |    :alt: Travis CI Status                                                             |
 +---------+---------------------------------------------------------------------------------------+
 | Quality | .. image:: https://api.codeclimate.com/v1/badges/58f9ffacb711c992610d/maintainability |
@@ -43,7 +43,56 @@ With pyApp 4.0, versions of Python < 3.6 are no longer supported.
 So what do we handle?
 =====================
 
+- Configuration - Loading, merging your settings from different sources
 
+  + Python modules
+  + File and HTTP(S) endpoints for JSON and YAML files.
+
+- Instance Factories - Configuration of plugins, database connections, or just
+  implementations of an ``ABC``.
+  Leveraging settings to make setup of your application easy and reduce coupling.
+
+- Dependency Injection - Easy to use dependency injection without complicated setup.
+
+- Checks - A framework for checking settings are correct and environment is
+  operating correctly (your ops team will love you)?
+
+- Extensions - Extend the basic framework with extensions. Provides deterministic
+  startup, extension of the CLI and the ability to register checks and extension
+  specific default settings.
+
+- Application - Provides a extensible and simple CLI interface for running
+  commands, comes with built-in commands to execute check, setting and extension
+  reports.
+
+- Logging - Initialise and apply sane logging defaults.
+
+- Highly tested and ready for production use.
+
+
+Extensions
+==========
+
+- SQLAlchemy - `pyapp.sqlalchemy`_
+- Redis - `pyapp.redis`_
+- AIOBotocore - `pyapp.aiobotocore`_
+
+In development
+--------------
+
+- SMTP - `pyapp.SMTP`_
+- Boto3 - `pyapp.boto3`_
+
+Coming soon
+-----------
+
+Extensions for LDAP, Paramiko.
+
+.. _pyapp.sqlalchemy: https://www.github.com/pyapp-org/pyapp.sqlalchemy
+.. _pyapp.redis: https://www.github.com/pyapp-org/pyapp.redis
+.. _pyapp.aiobotocore: https://www.github.com/pyapp-org/pyapp.aiobotocore
+.. _pyapp.SMTP: https://www.github.com/pyapp-org/pyapp.SMTP
+.. _pyapp.boto3: https://www.github.com/pyapp-org/pyapp.boto3
 
 
 Contributions
