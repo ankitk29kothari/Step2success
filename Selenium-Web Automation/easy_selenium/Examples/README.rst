@@ -1,6 +1,6 @@
-########################################################
-Step2success.in A Python professional Training Institue.
-#########################################################
+######################################
+step2success.in - A Python Proffesional Training Institue.
+######################################
 
 *Let us handle the boring stuff!*
 
@@ -51,7 +51,6 @@ So what do we handle?
 - Network Automation.
 
 - Excel Automation.
-
 
 
 

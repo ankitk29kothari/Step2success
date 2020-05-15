@@ -1,5 +1,5 @@
 ######################################
-step2success - A python Proffesional Training Institue.
+step2success.in - A Python Proffesional Training Institue.
 ######################################
 
 *Let us handle the boring stuff!*
