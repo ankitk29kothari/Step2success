@@ -1,5 +1,5 @@
 ######################################
-Step2success.in - A python professional Trainign Institute
+pyApp - A python application framework
 ######################################
 
 *Let us handle the boring stuff!*
@@ -17,34 +17,31 @@ Step2success.in - A python professional Trainign Institute
 |         |    :target: https://step2success.in/        |
 |         |    :alt: Maintainability                                                              |
 |         | .. image:: https://api.codeclimate.com/v1/badges/58f9ffacb711c992610d/test_coverage   |
-|         |    :target: https://step2success.in/               |
+|         |    :target: https://codeclimate.com/github/pyapp-org/pyapp/test_coverage              |
 |         |    :alt: Test Coverage                                                                |
 |         | .. image:: https://img.shields.io/badge/code%20style-black-000000.svg                 |
-|         |    :target: https://step2success.in/                                           |
+|         |    :target: https://github.com/ambv/black                                             |
 |         |    :alt: Once you go Black...                                                         |
 +---------+---------------------------------------------------------------------------------------+
 | Package | .. image:: https://img.shields.io/pypi/v/pyapp.svg                                    |
-|         |    :target: https://step2success.in/                                                |
+|         |    :target: https://pypi.io/pypi/pyapp/                                               |
 |         |    :alt: Latest Version                                                               |
 |         | .. image:: https://img.shields.io/pypi/pyversions/pyapp.svg                           |
-|         |    :target: https://step2success.in/                                                |
+|         |    :target: https://pypi.io/pypi/pyapp/                                               |
 |         | .. image:: https://img.shields.io/pypi/l/pyapp.svg                                    |
-|         |    :target: https://step2success.in/                                               |
+|         |    :target: https://pypi.io/pypi/pyapp/                                               |
 |         | .. image:: https://img.shields.io/pypi/wheel/pyapp.svg                                |
-|         |    :target: https://step2success.in/                                                |
+|         |    :target: https://pypi.io/pypi/pyapp/                                               |
 +---------+---------------------------------------------------------------------------------------+
 
+Many features inspired by Django, but modified to be more general for use
+outside of web applications.
 
-
+With pyApp 4.0, versions of Python < 3.6 are no longer supported.
 
 
 So what do we handle?
 =====================
-Automate our Emails
-Automate our Netwokrs
-Automate our Excel
-Automate our Emails
-
 
 
 
@@ -58,4 +55,3 @@ for your favourite service client of bug reports, feature enhancements.
 The core of pyApp is intended to remain simple and only provide required features
 with extensions providing optional more specific functionality.
 
-www.step2success.in
