@@ -14,7 +14,7 @@ pyApp - A python application framework
 |         |    :alt: Travis CI Status                                                             |
 +---------+---------------------------------------------------------------------------------------+
 | Quality | .. image:: https://api.codeclimate.com/v1/badges/58f9ffacb711c992610d/maintainability |
-|         |    :target: https://step2success.in/        |
+|         |    :target: https://codeclimate.com/github/pyapp-org/pyapp/maintainability            |
 |         |    :alt: Maintainability                                                              |
 |         | .. image:: https://api.codeclimate.com/v1/badges/58f9ffacb711c992610d/test_coverage   |
 |         |    :target: https://codeclimate.com/github/pyapp-org/pyapp/test_coverage              |
