@@ -1,6 +1,6 @@
-########################################################
-Step2success.in A Python professional Training Institue.
-#########################################################
+######################################
+pyApp - A python application framework
+######################################
 
 *Let us handle the boring stuff!*
 
@@ -55,6 +55,9 @@ So what do we handle?
 
 
 
+
+- SMTP - `pyapp.SMTP`_
+- Boto3 - `pyapp.boto3`_
 
 
 
