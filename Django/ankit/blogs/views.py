@@ -32,8 +32,8 @@ posts_dummy=[
 
 
 
-
 title='Blog'
+
 
 def home(request):
 	context={'posts':posts,'title':title}
@@ -42,7 +42,7 @@ def home(request):
 
 
 def about(request):
-	return render(request,'about.html')
+	return render(request,'about.html',{'posts':posts.objects.all()})
 
 
 def login(request):

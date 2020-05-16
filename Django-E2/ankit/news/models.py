@@ -11,3 +11,7 @@ class employee_details(models.Model):
 	user_create_date=(models.DateTimeField(auto_now_add=True))
 
 
+
+
+
+
