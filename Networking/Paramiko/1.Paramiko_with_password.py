@@ -1,8 +1,7 @@
-import personal_login
-from personal_login import main
+#import personal_login
+from personal_login import *
 my=main()
 #Ignore this lines this is calling my personal logins from another file.please provide your logins below
-
 
 
 #############################

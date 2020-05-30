@@ -24,6 +24,7 @@ client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 #Provide your login below
 hostname=my['hostname']
 username=my['username']
+print(hostname,username)
 key = paramiko.RSAKey.from_private_key_file(r"C:\Program Files\Python37\Lib\ankit_bitnami2020.pem")
 #cat /etc/os-release
 print ("connecting")
