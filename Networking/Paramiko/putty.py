@@ -1,5 +1,7 @@
 from pywinauto.application import Application
 import time
+
+#app = Application ().Start (cmd_line=u'notepad')
 app = Application ().Start (cmd_line=u'putty -ssh {}@{}'.format("nirai0",'10.57.164.20'))
 putty = app.PuTTY
 putty.wait ('ready')

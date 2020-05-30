@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
     
 setuptools.setup(
      name='easyselenium',    # This is the name of your PyPI-package.
-     version='0.8',                          # Update the version number for new releases
+     version='1.0',                          # Update the version number for new releases
               # The name of your scipt, and also the command you'll be using for calling it
      author="Ankit Kothari",
     author_email="ankit.kothari@hotmail.com",

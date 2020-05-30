@@ -164,19 +164,47 @@ def found_window(name):
 	return predicate
 
 
-def select_option(id,value,option):
+'''def select_option(id,value,my_option):
     def predicate(driver):
         try:
             if id=='na':
             	a=driver.find_element_by_xpath('{}'.format(value))
             else:
-            	a=driver.find_element_by_xpath('//*[@{}="{}"]'.format(id,value))
+            	a=driver.find_element_by_xpath('//select[@{}="{}"]'.format(id,value))
             a=Select(a)
             for o in a.options:
-            	if option.lower() in o.text.lower():
+            	#print(o.text)
+            	if my_option.lower() in o.text.lower():
             		a.select_by_visible_text(o.text)
             		if debugs:
             			print("Select option",o.text)
+            		return True 
+           
+        except Exception as e:
+            
+            return False
+        else:
+            return True 
+    return predicate'''
+
+#############################################################################
+
+def select_option(id,value,my_option):
+    def predicate(driver):
+        try:
+            if id=='na':
+            	a=driver.find_element_by_xpath('{}'.format(value))
+            else:
+            	a=driver.find_element_by_xpath('//select[@{}="{}"]'.format(id,value))
+            a=Select(a)
+            for o in a.options:
+            	#print(o.text)
+            	if my_option.lower() in o.text.lower():
+            		a.select_by_visible_text(o.text)
+            		if debugs:
+            			print("Select option",o.text)
+            		return True
+            return False
            
         except Exception as e:
             
@@ -185,9 +213,7 @@ def select_option(id,value,option):
             return True 
     return predicate
 
-#############################################################################
-
-
+    ##############################################################################
 
 
 def window_handle(no=1,title=False,timeout=50):
@@ -399,17 +425,18 @@ def read_text(xpath=False,timeout=50,**kwargs):
 
 
 	length=(len(elements4))
-	if length>1:
+	
 
-		output=[]
+	output=[]
 		
-		if elements4[0].get_attribute('value')!=None:
-			for i in elements4:
-				temp=(i.text,i,i.get_attribute('value'))
-				output.append(temp)
-		else:
-			for i in elements4:
-				output.append((i.text,i))
+	if elements4[0].get_attribute('value')!=None:
+		for i in elements4:
+			temp=(i.text,i,i.get_attribute('value'))
+			output.append(temp)
+	else:
+		for i in elements4:
+			output.append((i.text,i))
+	#print('output',output)
 	
 
 	if debugs:
@@ -500,7 +527,7 @@ def window_alert(text='NA',with_enter=False):
 #####################################################################################################
 def page_source():
 	x=driver.page_source
-	print(x)
+	#print(x)
 	return(x)
 ####################################################################################################
 

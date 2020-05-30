@@ -16,11 +16,12 @@ gsk_login='hhj70755'
 gsk_password='India@2wsx'
 
 excel_name="input.xlsx"
-
-
-
-
 global_lock = threading.Lock()
+
+def read_config():
+	
+
+
 def UpdateRoutersResultsToSheet(s_id,fping,output):
 
 	print('writting')

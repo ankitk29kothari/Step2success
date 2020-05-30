@@ -11,7 +11,7 @@ import time
 
 from easyselenium import *
 import time
-driver=open_browser(browser='firefox',debug=True,headless=True)
+driver=open_browser(browser='ie',debug=True,headless=False)
 #open_broswer(browser='firefox')
 #open_broswer(browser='ie')
 #open_broswer(browser='chrome',headless=True)

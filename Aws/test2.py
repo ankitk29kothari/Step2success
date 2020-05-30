@@ -10,7 +10,7 @@ import boto3
 def compare_faces(sourceFile, targetFile):
 
 
-    client = boto3.client('rekognition',aws_access_key_id="AKIAQSEWML5GLJDYYNCW",aws_secret_access_key="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",region_name='ap-south-1')
+    client = boto3.client('rekognition',aws_access_key_id="AKIAQSEWML5GJXRGB2I3",aws_secret_access_key="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",region_name='ap-south-1')
 
    
     imageSource=open(sourceFile,'rb')
@@ -39,7 +39,7 @@ def main():
     t1=time.perf_counter()
     source_file='photo1.jpg'
     target_file='photo2.jpg'
-    target2_file='photo5.jpg'
+    target2_file='photo2.jpg'
 
     face_matches=compare_faces(source_file, target_file)
     print("Face matches: " + str(face_matches))
