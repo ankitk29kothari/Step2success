@@ -5,7 +5,7 @@ import os
 
 from easyselenium.webdriver_manager.archive import extract_zip, extract_tar_file
 from easyselenium.webdriver_manager.utils import write_file, get_filename_from_response, \
-    console, get_date_diff
+    console, get_date_diff,chrome_version
 
 
 class DriverCache(object):
@@ -83,12 +83,23 @@ class DriverCache(object):
 
     def is_valid_cache(self, driver_name):
         metadata = self.read_metadata()
+        
         if driver_name in metadata:
             driver_data = metadata[driver_name]
             dates_diff = get_date_diff(driver_data['timestamp'],
                                        datetime.date.today(),
                                        self._date_format)
-            return dates_diff < 30
+            if 'chrome' in driver_name:
+                ver=chrome_version()
+                console('chrome version {}'.format(ver))
+                if ver in driver_data['latest_version']:
+                    
+                    return dates_diff < 30
+                else:
+                    print('not latest version')
+                    return False
+            else:
+                 return dates_diff < 30
 
         return False
 

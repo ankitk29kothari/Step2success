@@ -2,14 +2,14 @@ from pywinauto.application import Application
 import time
 
 #app = Application ().Start (cmd_line=u'notepad')
-app = Application ().Start (cmd_line=u'putty -ssh {}@{}'.format("nirai0",'10.57.164.20'))
+app = Application ().Start (cmd_line=u'putty -ssh {}@{}'.format("login",'host '))
 putty = app.PuTTY
 putty.wait ('ready')
 
-putty.type_keys ("Nishtharai15@")
+putty.type_keys ("password")
 putty.type_keys ("{ENTER}")
 time.sleep(5)
-putty.type_keys ("Nishtharai15@")
+putty.type_keys ("password")
 putty.type_keys ("{ENTER}")
 time.sleep (5)
 
@@ -38,7 +38,7 @@ def connect_device(device, cmd):
 #######################################################################################################################
 
 for i in range(0,10):
-	connect_device('pxvu130','sh ver | in up')
+	connect_device('device name','sh ver | in up')
 
 
 
