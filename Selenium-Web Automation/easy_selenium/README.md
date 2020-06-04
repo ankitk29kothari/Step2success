@@ -2,7 +2,7 @@ easyselenium
 
 *Let us handle the boring stuff!*
 
-* [Step2success](www.step2success.in)
+* [Step2success](https://step2success.in)
 
 ====================
 

@@ -31,7 +31,7 @@ print( sorted(releases, key=parse_version, reverse=True)  )
 #subprocess.call(["pip","install","--upgrade","easyselenium"])
 
 
-print('Documentation & Examples: \n\nhttps://pypi.org/project/easyselenium/  \nwww.step2success.in/easyselenium                \n \ncall easyselenium_help()\n')
+print('Documentation & Examples: \n\nhttps://pypi.org/project/easyselenium/  \nhttps://www.step2success.in/easyselenium/               \n \n')
 print('')
 
 
@@ -45,14 +45,26 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
+import concurrent.futures
 
 import time
 global driver
 
-
+###############################################################################
+def autoupgrade():
+		
+	import os
+	stdout=os.popen("pip install --upgrade easyselenium").read()
+	if debugs:
+		print('Checking for easyselenium updates')
 #####################################################################################################
 
 
+
+with concurrent.futures.ThreadPoolExecutor(max_workers = 1) as executor:
+	a=executor.submit(autoupgrade)
+
+#####################################################################################################
 def open_browser(headless=False,path="",browser='chrome',debug=True,auto_upgrade=True):
 	global driver
 	global debugs
@@ -117,13 +129,7 @@ def connect_exisitng_browser(url,session_id):
 	return(driver)
 
 
-###############################################################################
-def autoupgrade():
-		
-	import os
-	stdout=os.popen("pip install --upgrade easyselenium").read()
-	if debugs:
-		print('Checking for easyselenium updates')
+
 
 
 ###############################################################################
@@ -136,12 +142,9 @@ def open_url(url='https://step2success.in',new_tab=False,debug=True):
 		print("opening url in new tab Title: ",driver.title,'\n')
 		return()
 	else:
-		import concurrent.futures
-		with concurrent.futures.ThreadPoolExecutor(max_workers = 500) as executor:
-			a=executor.submit(autoupgrade)
-			driver.get(url)
-			if debugs:
-				print("opening url \n** for New Tab use: new_tab=True\n")
+		driver.get(url)
+		if debugs:
+			print("opening url \n** for New Tab use: new_tab=True\n")
 
 	
 
