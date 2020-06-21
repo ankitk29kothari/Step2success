@@ -11,6 +11,11 @@ cars = {'Brand': ['Honda Civic','Toyota Corolla','Ford Focus','Audi A4'],
         'color':['Red','Blue','White','yellow'],
 
         }
+
+
+
+
+     
 df = pd.DataFrame(cars, columns = ['Brand', 'Price','color'])
 print(df)
 

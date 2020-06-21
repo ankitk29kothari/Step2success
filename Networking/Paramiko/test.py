@@ -1,10 +1,6 @@
 import winsound
 import time
-winsound.Beep(2000,200)
-time.sleep(0.1)
-winsound.Beep(2000,300)
-time.sleep(0.1)
-winsound.Beep(2000,200)
+
 
 
 

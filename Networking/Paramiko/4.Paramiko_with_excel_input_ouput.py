@@ -62,18 +62,32 @@ def write_text_file(device,output):
     a.write(output)
     a.close()
 
+def dynamic_wait(time_sleep_interval,max_time_sleep,parameter):
+	output = str(shell_object.recv(999999))
+	c=0
+
+	while parameter not in output:
+		time.sleep(time_sleep_interval)
+		output = str(shell_object.recv(999999))
+		c+1
+		if c>max_time_sleep:
+			break
+
 
 def connect(router,command,s_id):
 	print(s_id,router,command)
 	shell_object = client.invoke_shell()
 	time.sleep(1)
 	shell_object.send(password+'\n')
-	time.sleep(5)
+	dynamic_wait(0.5,20,'Registered')
 
 	cmd='l {}'.format(router)
 	shell_object.send(cmd + "\n")
-	time.sleep(12)
-	output = str(shell_object.recv(999999))
+	dynamic_wait(0.5,20,'Device connected')
+
+
+	
+	
 	#shell_object.send("sh ver | i uptime" + "\n")
 	shell_object.send(command + "\n")
 	time.sleep(2)

@@ -1,0 +1,26 @@
+pfra4025#sh ip int brief
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet0/0/0   10.103.1.2      YES NVRAM  up                    up      
+Gi0/0/0.1003           151.193.24.14   YES NVRAM  up                    up      
+Gi0/0/0.1008           151.193.24.26   YES NVRAM  up                    up      
+Gi0/0/0.1009           151.193.24.30   YES manual up                    up      
+Gi0/0/0.1010           151.193.24.34   YES manual up                    up      
+Gi0/0/0.1011           151.193.24.38   YES manual up                    up      
+GigabitEthernet0/0/1   unassigned      YES NVRAM  up                    up      
+GigabitEthernet0/0/1.2 57.212.226.246  YES NVRAM  up                    up      
+Gi0/0/1.101            57.212.227.186  YES NVRAM  up                    up      
+Gi0/0/1.102            57.21.19.246    YES manual up                    up      
+Gi0/0/1.103            57.212.131.138  YES NVRAM  up                    up      
+Gi0/0/1.104            57.213.135.202  YES manual up                    up      
+Gi0/0/1.105            57.221.222.222  YES manual up                    up      
+GigabitEthernet0/0/2   unassigned      YES NVRAM  administratively down down    
+GigabitEthernet0/0/3   unassigned      YES NVRAM  administratively down down    
+GigabitEthernet0       unassigned      YES NVRAM  administratively down down    
+Loopback79             57.238.48.15    YES NVRAM  up                    up      
+Loopback1111           57.214.246.253  YES NVRAM  up                    up      
+Loopback1114           57.214.246.132  YES NVRAM  up                    up      
+Loopback1115           57.214.246.165  YES manual up                    up      
+Loopback1116           57.214.246.160  YES NVRAM  up                    up      
+Loopback1117           57.214.246.164  YES manual up                    up      
+Loopback1118           57.214.246.166  YES manual up                    up      
+pfra4025#
