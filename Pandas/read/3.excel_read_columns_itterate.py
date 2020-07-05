@@ -12,8 +12,9 @@ df=pandas.read_excel("input.xlsx")
 col_1=df['switch']
 col_2=df['input']
 col_3=df['output']
+col_4=df['command']
 
-for i,j,k in zip(col_1,col_2,col_3):
-	print(i,j,k)
+for i,j,k,l in zip(col_1,col_2,col_3,col_4):
+	print(f'This is switch - {i}  firing command {l} input rate:{j}, outputrate:{k}')
 	print('----')
 

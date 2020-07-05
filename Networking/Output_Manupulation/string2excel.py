@@ -8,8 +8,7 @@ data=defaultdict(list)
 
 for i in b:
     if 'up' in i:
-        
-        
+
         #print(i)
         #print(i[0],"&&                  ",i[1])
         #print('+++++++++++++++++++++++')

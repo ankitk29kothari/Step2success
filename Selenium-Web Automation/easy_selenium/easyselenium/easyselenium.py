@@ -31,7 +31,7 @@ print( sorted(releases, key=parse_version, reverse=True)  )
 #subprocess.call(["pip","install","--upgrade","easyselenium"])
 
 
-print('Documentation & Examples: \n\nhttps://pypi.org/project/easyselenium/  \nhttps://www.step2success.in/easyselenium/               \n \n')
+print('documentation & Examples: \n\nhttps://pypi.org/project/easyselenium/  \nhttps://www.step2success.in/easyselenium/               \n \n')
 print('')
 
 
@@ -81,6 +81,7 @@ def open_browser(headless=False,path="",browser='chrome',debug=True,auto_upgrade
 			chrome_options.add_argument('--headless')
 		#chrome_options.add_argument('window-size=1920x1080');
 		chrome_options.add_argument("--start-maximized")
+		chrome_options.add_argument('ignore-certificate-errors')
 		driver=webdriver.Chrome(ChromeDriverManager(path=path).install(),chrome_options=chrome_options)
 		
 	
@@ -121,8 +122,10 @@ def open_browser(headless=False,path="",browser='chrome',debug=True,auto_upgrade
 #############################################################################
 
 
-def connect_exisitng_browser(url,session_id):
+def connect_exisitng_browser(url,session_id,debug=True):
 	global driver
+	global debugs
+	debugs=debug=True
 	driver = webdriver.Remote(command_executor=url,desired_capabilities={})
 	driver.session_id = session_id
 	print("connecting existing browser")
@@ -229,11 +232,14 @@ def window_handle(no=1,title=False,timeout=50):
 		    driver.switch_to.window(handles[x])
 		   
 		    if title.lower() in str(driver.title).lower():
+		    	if debugs:
+		    		print('window handle no' ,no,driver.title)
 		    	return(driver.title)
 
 	WebDriverWait(driver, timeout=timeout).until(found_window(no))
 	if debugs:
 		print('window handle no' ,no,driver.title)
+	driver.maximize_window()
 	return(driver.title)
 
 #####################################################################################################
@@ -300,6 +306,7 @@ def click_on(text=False,image=False,xpath=False,repeat_click=False,timeout=50,**
 		cl=WebDriverWait(driver, timeout).until(EC.element_to_be_clickable((By.XPATH, '//*[@{}="{}"]'.format(key,kwargs[key]))))
 		if debugs:
 			print("click on",kwargs[key])
+	#ActionChains(driver).move_to_element(cl).perform()
 	cl.click()
 	if repeat_click:
 		try:
@@ -478,8 +485,8 @@ def close_window(no=0,title=False,switch_to=0):
 				print('close window no',no)
 		driver.close()
 		
-		if no>0:
-			window_handle(switch_to)
+		#if no>0:
+		#	window_handle(switch_to)
 	except:
  		print('No such window')
 
