@@ -62,6 +62,9 @@ def write_text_file(device,output):
     a.write(output)
     a.close()
 
+
+
+
 def dynamic_wait(time_sleep_interval,max_time_sleep,parameter):
 	output = str(shell_object.recv(999999))
 	c=0
@@ -72,6 +75,9 @@ def dynamic_wait(time_sleep_interval,max_time_sleep,parameter):
 		c+1
 		if c>max_time_sleep:
 			break
+
+
+
 
 
 def connect(router,command,s_id):

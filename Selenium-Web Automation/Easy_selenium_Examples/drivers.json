@@ -1,7 +1,7 @@
 {
     "chromedriver": {
-        "latest_version": "81.0.4044.138",
-        "timestamp": "14/05/2020"
+        "latest_version": "83.0.4103.39",
+        "timestamp": "18/07/2020"
     },
     "IEDriverServer": {
         "latest_version": "3.150.1",
