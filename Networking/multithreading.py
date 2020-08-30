@@ -1,9 +1,9 @@
 import concurrent.futures
 from concurrent.futures import ProcessPoolExecutor
 import time
+parainko connect
 
-
-def test (a):
+def test ():
 	time.sleep(10)
 	print(a*a)
 	return(a*a)

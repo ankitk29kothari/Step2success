@@ -17,14 +17,14 @@ import paramiko
 import time
 
 #Provide your login below
-host=my['host']
-login=my['login']
+host='102.2.3.3'
+login=''sss
 password=my['password']
 
 
 client = paramiko.SSHClient()
 client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-client.connect(hostname=host, username=login, password=password, look_for_keys=False, allow_agent=False)
+client.connect(hostname=host, username=login, password=password, look_for_keys=False, allow_agent=False)//jump server
 # Use any of this Method 
 
 ############################################################################################################################
@@ -52,9 +52,10 @@ if data:
 
 shell_object = client.invoke_shell()
 time.sleep(3)
-shell_object.send("\n")
+shell_object.send("ANkit@9\n")
 time.sleep(4)
 cmd='pwd'
+shell_object.send('ssh- l espsppewfwfwffefefefef'+ "\n")
 shell_object.send(cmd + "\n")
 time.sleep(3)
 output = str(shell_object.recv(999999).decode("utf-8"))
