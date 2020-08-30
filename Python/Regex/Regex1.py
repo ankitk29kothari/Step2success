@@ -23,12 +23,6 @@ not fntn ^[A-Za-z0-9.@]
 
 
 
-Match()-Begning
-Search()-Any
-findall()
-finditer()
-
-
 Qualifiers
 ____________
 
@@ -37,6 +31,11 @@ ____________
 ? - 0 or one
 Exactly {3} - this no
 
+
+Match()-Begning
+Search()-Any
+findall()
+finditer()
 
 '''
 
