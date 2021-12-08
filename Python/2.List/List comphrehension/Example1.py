@@ -1,20 +1,20 @@
 #Normal Method
 
 #1.
-l=[]
-for i in range (0,20):
-	l.append(i*i)
-print(l)
+#l=[]
+#for i in range (0,20000000):
+#	l.append(i*i*i)
+#print(l)
 
 ##############################################
 # By List Comphrehension
-l_c=[i*i for i in range(0,20)]
-print(l_c)
+l_c=[i*i*i for i in range(0,20000000)]
+#print(l_c)
 
 
 #################################################
 #################################################
-
+'''
 name='Ankit Kothari'
 
 l2=[]
@@ -25,4 +25,4 @@ print(l2)
 ###############################################
 # By List Comphrehension
 l_c2=[i for i in name]
-print(l_c2)
+print(l_c2)'''

@@ -1,5 +1,7 @@
 ## REGEX
 '''
+127.0.0.1
+
 \d - To find out all digits 0-9
 \D- Non digit
 
