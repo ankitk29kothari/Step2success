@@ -10,7 +10,7 @@
 # only can use in local system
 import sqlite3 
  
-db='main1.db'
+db='ankit2.db'
 
 def create(): 
                       
@@ -28,13 +28,22 @@ def create():
 
 
 
+def insert():
+	con = sqlite3.connect(db) # connect database
+	c=con.cursor() 
+	c.execute("INSERT INTO emp01 VALUES (2,'xyz','ankit.kothari@orange.com',8882663652)")
+	con.commit()
+	print('Inserted')
+
+
+#insert()
 def read():
 
 	    print('reading database')
 	    con = sqlite3.connect(db) # connect database
 	    c=con.cursor() 
 	    
-	    for row in c.execute('SELECT*FROM emp01 WHERE id="1"' ):
+	    for row in c.execute('SELECT * FROM emp01 ORDER BY name DESC ' ):
 	    	
 		  
 		    print(row)
@@ -59,6 +68,6 @@ def update(name,email,phone_no):
 
 # uncomment to call any functions
 
-create()
+#create()
 #update('ankit','xx.gmail.com',123)
 read()

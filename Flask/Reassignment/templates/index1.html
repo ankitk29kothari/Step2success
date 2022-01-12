@@ -1,0 +1,183 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Ticket Owner Reassigment</title>
+
+  
+  <link data-jsfiddle="common" rel="stylesheet" media="screen" href="/static/css/handsontable.css">
+
+
+
+  <script data-jsfiddle="common" src="/static/css/handsontable.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--
+  Loading demo dependencies. They are used here only to enhance the examples on this page
+  -->
+  <link rel="stylesheet" media="screen" href="http://past.handsontable.com/demo/css/samples.css?20140331">
+  <script  data-jsfiddle="common" src="http://past.handsontable.com/demo/js/samples.js"></script>
+
+
+
+
+  
+</head>
+
+<body>
+
+
+
+
+    <div id="container">
+      <div class="columnLayout">
+
+        <div class="rowLayout">
+          <div class="descLayout">
+            <div class="pad" data-jsfiddle="example">
+             <a href="/Backhaulprovisioning/augment/users.php" target = "blank">-</a>&nbsp;&nbsp;&nbsp;
+
+
+              <p>
+                <button name="load" id="load">Reassign</button>
+               <button name="save" id="save">-</button>
+                
+    
+                  
+                </button>
+           
+              </p>
+
+<pre id="exampleConsole"class="console"> </pre>
+ <div id="example"></div>
+
+          
+        </div>
+      </div>
+
+         
+              <script data-jsfiddle="example">
+
+
+
+
+                
+              var
+  $container = $("#example"),
+  $console = $("#exampleConsole"),
+  $parent = $container.parent(),
+  autosaveNotification,
+  hot;
+
+hot = new Handsontable($container[0], {
+  columnSorting: true,
+  startRows: 50,
+  startCols: 2,
+  rowHeaders: true,
+
+  
+ 
+  colWidths: [200, 250, 250],
+
+  manualColumnResize: true,
+ 
+
+
+ 
+  minSpareCols: 0,
+  minSpareRows: 2,
+  contextMenu: true,
+    colHeaders: ['Oceane Ticket Ref ', 'New  Technician', 'Status'],
+    columns: [
+    {},
+   
+    {
+      type: 'dropdown',
+      source:{{names | tojson}},
+    },
+    
+  {},
+  ],
+  afterChange: function (change, source) {
+    var data;
+
+    if (source === 'loadData' || !$parent.find('input[name=autosave]').is(':checked')) {
+      return;
+    }
+    data = change[0];
+
+    // transform sorted row to original row
+    data[0] = hot.sortIndex[data[0]] ? hot.sortIndex[data[0]][0] : data[0];
+
+    clearTimeout(autosaveNotification);
+  
+  }
+});
+
+
+
+$parent.find('button[name=load]').click(function () {
+   
+
+ $.ajax({
+    url: '/result',
+    data: {data: hot.getData()}, // returns all cells' data
+    dataType: 'json',
+    type: 'POST',
+    
+    success: function (res) {
+      if (res.result === 'ok') {
+        $console.innerText('Data saved');
+      }
+      else {
+        $console.innerText('Save error');
+      }
+    },
+    error: function () {
+      $console.innerText('Save error');
+    }
+  });
+
+ alert("Initated..Status will updated after Completion.");
+
+
+   
+
+  
+
+}) // execute immediately
+
+$parent.find('button[name=save]').click(function () {
+  $.ajax('/result', 'GET', '', function(res) {
+    var data = JSON.parse(res.response);
+    
+
+    console.innerText(data);
+    
+
+    hot.loadData(data.data);
+    console.innerText  = 'Data loaded';
+    alert("load");
+  });
+});
+
+
+
+              </script>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-text">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<div id="outside-links-wrapper"></div>
+
+</body>
+</html>

@@ -9,8 +9,11 @@ hotel_name=read_text(xpath='class="listingHotelDescription__hotelName d-textElli
 hotel_price=read_text(xpath='class="listingPrice__finalPrice"')
 
 
-
+'''
 for i,j in zip(hotel_name,hotel_price):
 	print('Hote name: {} and its price is{}'.format(i[0],j[0]))
 
+'''
 
+print(type(hotel_price))
+print((hotel_name[0]))

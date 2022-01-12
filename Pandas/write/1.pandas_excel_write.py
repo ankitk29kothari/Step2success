@@ -14,9 +14,9 @@ cars = {'Brand': ['Honda Civic','Toyota Corolla','Ford Focus','Audi A4'],
 
 
 
-
      
-df = pd.DataFrame(cars, columns = ['Brand', 'Price','color'])
+df = pd.DataFrame(cars)
+#convert to pandas df
 print(df)
 
 df.to_excel (r'export_dataframe.xlsx', index = False, header=True)

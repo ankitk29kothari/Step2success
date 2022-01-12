@@ -1,0 +1,10 @@
+{
+    "geckodriver": {
+        "latest_version": "v0.29.1",
+        "timestamp": "15/08/2021"
+    },
+    "chromedriver": {
+        "latest_version": "96.0.4664.45",
+        "timestamp": "20/11/2021"
+    }
+}

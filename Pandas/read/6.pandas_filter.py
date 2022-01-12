@@ -21,9 +21,17 @@ print(df)
 print('======')
 
 
+#Sorting
+#df=df.sort_values(by=['name'], ascending=True)
 
-
-
+#replace Nan
+#import numpy
+#df['Project type'] = df['Project type'].replace(np.nan, '')
+#repalce values in column
+#df_filters['Serial number'] = df_filters['Serial number'].replace('TOBECHECKED', 'Serial number not found in the template')
+#Multiple filters
+#inner_df=inner_df[(inner_df["Action required"] == 'Add') | (inner_df["Action required"] == 'Remove')  | (inner_df["Action required"] == 'Add (Swap)')  | (inner_df["Action required"] == 'Remove (Swap)') | (inner_df["Action required"] == 'Redeployment')] 
+	       
 
 
 

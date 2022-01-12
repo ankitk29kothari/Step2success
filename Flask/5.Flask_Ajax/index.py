@@ -53,9 +53,8 @@ def show_all():
 
 
 if __name__ == '__main__':
-    app.run(port= 5049,debug=True)
+    app.run(port= 5050,debug=True)
 
 
 
     
-

@@ -19,12 +19,23 @@ app = Flask(__name__)
 #1st function / by default address(home page)
 @app.route('/')
 def student():
-   return ('Hello Iam Flask')
+   return ('Hello Iam Ankit')
    #return value to url.
 
+
+@app.route('/home')
+def student2():
+   return ('Hello Iam Flask2')
+   #return value to url.
+
+
+@app.route('/Sahil')
+def sahil():
+   return ('<h1>Sahil is bca grad</h1>')
+   #return value to url.
 
 	
 
 if __name__ == '__main__':
-   app.run(port=5088,debug=True)
+   app.run(port=5000,debug=True)
    #change port acc to your convienence

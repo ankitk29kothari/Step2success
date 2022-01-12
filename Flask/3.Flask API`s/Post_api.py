@@ -34,6 +34,7 @@ def page():
 def sum():
 	if request.method == 'POST':
 		result = request.get_json()
+		print(result)
 		a=result['a']
 		b=result['b']
 		print(result)

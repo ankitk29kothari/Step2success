@@ -9,8 +9,8 @@ def create_folder(directory):
 	else:
 		print("already created")
 
-#for i in range(1,1000):
-#	create(r'C:\Users\mcjp2518\Desktop\step2successs\Python\file_handling\demoby_python\{}'.format(i))
+#for i in range(1,10):
+#	create_folder(str(i))
 
 
 
