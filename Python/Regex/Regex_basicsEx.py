@@ -13,6 +13,11 @@ pattern=re.compile(r'[897]0\d[.-]\d{3}[.-]\d*')
 #pattern1=re.compile(r'\w\w\w\w?\w?.\d\d\d\d?\d?\d?')
 
 matches=pattern.findall(text)
+pattern=re.compile(r'\w[a]\w[,]')
+
+pattern1=re.compile(r'\w\w\w\w?\w?.\d\d\d\d?\d?\d?')
+
+matches=pattern1.findall(text2)
 matches_str=' '.join(matches)
 print(matches_str)
 

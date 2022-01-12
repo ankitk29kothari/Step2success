@@ -2,6 +2,8 @@ a=2
 b=4
 
 #print(d)
+b=0
+
 
 try:
 	c=a/b
