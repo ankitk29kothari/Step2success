@@ -1,3 +1,4 @@
+#pip insall pywinauto
 from pywinauto.application import Application
 import time
 import pandas as pd

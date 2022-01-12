@@ -38,6 +38,7 @@ def result():
 
       #db query insert into this ...
       #Insert into user 
+      #return(str(int(result['username'])+int(result['dob'])))
       return render_template("result.html",result = result)
 
       

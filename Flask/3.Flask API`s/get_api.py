@@ -49,4 +49,4 @@ def disp1(no1,no2):
 
 
 if __name__ == '__main__':
-   app.run(port=5000)
+   app.run(port=5010)

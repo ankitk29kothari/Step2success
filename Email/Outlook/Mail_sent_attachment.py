@@ -8,7 +8,7 @@ o = win32com.client.Dispatch("Outlook.Application")
 
     
 Msg = o.CreateItem(0)
-Msg.To = "ankit.kothari@orange.com"
+Msg.To = "ankit.kumar.kothari@accenture.com"
     
 #Msg.CC = "more email addresses here"
 #Msg.BCC = "more email addresses here"

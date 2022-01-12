@@ -2,6 +2,25 @@
 #if -right of forloop -result left side for loop
 #if else- left side -if result if left -else right 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #square
 ############################################################
 

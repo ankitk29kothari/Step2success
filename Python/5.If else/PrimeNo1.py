@@ -15,3 +15,7 @@ for i in range(2,1000):
 
 
 print((prime_no))
+
+
+
+print((prime_no))

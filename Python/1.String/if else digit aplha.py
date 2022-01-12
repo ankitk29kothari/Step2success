@@ -1,4 +1,7 @@
+# Find the no of digit ,alpha & spl chs in user given password using counter
 c1=c2=c3=0
+
+
 
 
 

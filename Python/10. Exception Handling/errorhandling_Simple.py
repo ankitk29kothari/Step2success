@@ -1,4 +1,7 @@
 a=2
+b=4
+
+#print(d)
 b=0
 
 
@@ -9,6 +12,11 @@ try:
 
 except Exception as e:
 	print("error",e)
+	print("Iam running")
+	
+
+#optionally
+
 
 else:
 	print("Iam only run when try finsih properly or except wont run")
